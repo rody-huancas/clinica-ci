@@ -1,0 +1,30 @@
+ERROR - 2022-11-27 00:57:42 --> Unknown column 'usuario' in 'field list'
+CRITICAL - 2022-11-27 00:57:42 --> Unknown column 'usuario' in 'field list'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `usuario...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuario...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuario...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\UsuarioModel.php(51): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(31): App\Models\UsuarioModel->AnioUsu()
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-11-27 00:58:03 --> Array to string conversion
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\dashboard\dashboard.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\laragon\\www\\...', 49)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('dashboard/dashb...', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(145): view('dashboard/dashb...')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(32): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}

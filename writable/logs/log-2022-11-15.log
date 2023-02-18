@@ -1,0 +1,98 @@
+CRITICAL - 2022-11-15 20:58:44 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 69)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 20:59:37 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 69)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 20:59:42 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 69)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 21:06:09 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 69)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 21:06:34 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 69)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 21:06:39 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 69)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 21:59:51 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 71)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 22:03:20 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 71)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 22:45:02 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 71)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 22:49:11 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 71)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 22:49:56 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 71)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 22:49:59 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 71)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 22:50:23 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 71)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-11-15 22:57:15 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 71)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

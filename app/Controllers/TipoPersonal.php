@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\TipoPersonalModel;
 
+//Cambio hecho
 
 class TipoPersonal extends BaseController
 {

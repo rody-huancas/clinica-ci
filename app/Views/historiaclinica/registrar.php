@@ -6,7 +6,7 @@
     <div class="br-pagebody">
         <div class="br-section-wrapper">
             <div class="form-layout form-layout-1">
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="<?php echo base_url() ?>/historiaclinica/registrarDatos" method="POST" enctype="multipart/form-data">
                     <div class="row mg-b-25">
 
                         <h4 class="col-12 tx-gray-800 border-top-secondary mt-3 mb-3">Datos del Paciente</h4>

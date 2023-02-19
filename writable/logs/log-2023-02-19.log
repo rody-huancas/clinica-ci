@@ -1,0 +1,18 @@
+CRITICAL - 2023-02-19 18:43:20 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\laragon\www\ProyectoClinica_ci\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(28): require('...')
+#4 {main}
+CRITICAL - 2023-02-19 18:43:47 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\laragon\www\ProyectoClinica_ci\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(28): require('...')
+#4 {main}
+CRITICAL - 2023-02-19 12:55:42 --> Class "App\Controllers\DateTime" not found
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->registrarDatos()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

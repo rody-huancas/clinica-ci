@@ -13,7 +13,7 @@
     <div class="br-pagebody">
         <div class="br-section-wrapper">
             <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10 mb-5 d-flex justify-content-between">
-                Usuarios Registrados
+                Historias Clínicas Registradas
                 <a href="<?php echo base_url() ?>/historiaclinica/registrar"><button class="btn btn-primary" type="button" style="cursor: pointer;"><i class="icon ion-plus"></i> Nueva Historia Clínica</button></a>
             </h6>
             <div class="form-layout form-layout-1">
@@ -27,10 +27,10 @@
                                     <th class="text-center wd-20p">Código</th>
                                     <th class="text-center wd-35p">Nombre Completo</th>
                                     <th class="text-center wd-25p">DNI</th>
+                                    <th class="text-center wd-10p">Telefono</th>
                                     <th class="text-center wd-10p">Edad</th>
                                     <th class="text-center wd-15p">Fecha de Nacimiento</th>
                                     <th class="text-center wd-10p">Dirección</th>
-                                    <th class="text-center wd-15p">Telefono</th>
                                     <th class="text-center wd-20p">Motivo</th>
                                 </tr>
                             </thead>
@@ -57,6 +57,9 @@
                                             <?php echo $row["dni"]; ?>
                                         </td>
                                         <td class="text-center">
+                                            <?php echo $row["telefonoPaciente"]; ?>
+                                        </td>
+                                        <td class="text-center">
                                             <?php echo $row["edad"]; ?>
                                         </td>
                                         <td class="text-center">
@@ -64,9 +67,6 @@
                                         </td>
                                         <td class="text-center">
                                             <?php echo $row["direccion"]; ?>
-                                        </td>
-                                        <td class="text-center">
-                                            <?php echo $row["telefono"]; ?>
                                         </td>
                                         <td class="text-center">
                                             <?php echo $row["dni"]; ?>

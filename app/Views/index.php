@@ -96,7 +96,7 @@
       <!-- br-menu-link -->
       <a href="#" class="br-menu-link">
         <div class="br-menu-item">
-          <i class="menu-item-icon icon ion-ios-medkit-outline tx-24"></i>
+          <i class="fa-solid fa-house-medical menu-item-icon tx-15"></i>
           <span class="menu-item-label">Historias Clínicas</span>
           <i class="menu-item-arrow fa fa-angle-down"></i>
         </div>

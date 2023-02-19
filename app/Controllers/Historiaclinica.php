@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\HistoriaClinicaModel;
+use DateTime;
 
 class Historiaclinica extends BaseController
 {
@@ -45,8 +46,8 @@ class Historiaclinica extends BaseController
             $nombre = $this->request->getPost("nombre");
             $apellidos = $this->request->getPost("apellidos");
             $dni = $this->request->getPost("dni");
+            $telefonoPaciente = $this->request->getPost("telefonoPaciente");
             $direccion = $this->request->getPost("direccion");
-            $edad = $this->request->getPost("edad");
             $fecha = $this->request->getPost("fecha");
             $distrito = $this->request->getPost("distrito");
             $provincia = $this->request->getPost("provincia");
@@ -57,14 +58,19 @@ class Historiaclinica extends BaseController
             $especialidad = $this->request->getPost("especialidad");
             $motivo = $this->request->getPost("motivo");
 
-            // Generar código único
+            // Calcular la edad a partir de la fecha de nacimiento
+            $fechaNac = new DateTime($fecha);
+            $hoy = new DateTime();
+            $edad = $fechaNac->diff($hoy)->y;
 
+            // Generar código único
             $cc_code = 'CC-' . str_pad($this->db->table('historiaclinica')->countAllResults() + 1, 7, '0', STR_PAD_LEFT);
 
             $data = [
                 "codigohistoria" => $cc_code,
                 "nombres" => $nombre,
                 "apellidos" => $apellidos,
+                "telefonoPaciente" => $telefonoPaciente,
                 "edad" => $edad,
                 "fechaNac" => $fecha,
                 "distrito" => $distrito,
@@ -86,6 +92,7 @@ class Historiaclinica extends BaseController
             return redirect()->to(base_url() . "/historiaclinica");
         }
     }
+
 
     public function visualizar($id)
     {

@@ -41,8 +41,8 @@
 
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label class="form-control-label">Edad: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" name="edad" id="edad" placeholder="Ingrese la edad">
+                                <label class="form-control-label">Télefono: <span class="tx-danger">*</span></label>
+                                <input class="form-control" type="text" name="telefonoPaciente" id="telefonoPaciente" placeholder="Ingrese número de telefono">
                             </div>
                         </div><!-- col-4 -->
 
@@ -119,7 +119,7 @@
 
                     <div class="form-layout-footer">
                         <input type="submit" value="Guardar" class="btn btn-info" name="btnEnviar">
-                        <a href="<?php echo base_url() ?>/usuarios" class="btn btn-secondary">Cancelar</a>
+                        <a href="<?php echo base_url() ?>/historiaclinica" class="btn btn-secondary">Cancelar</a>
                     </div><!-- form-layout-footer -->
                 </form>
             </div><!-- form-layout -->

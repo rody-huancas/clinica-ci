@@ -19,6 +19,7 @@ class HistoriaClinicaModel extends Model
         'codigohistoria',
         'nombres',
         'apellidos',
+        'telefonoPaciente',
         'edad',
         'fechaNac',
         'distrito',

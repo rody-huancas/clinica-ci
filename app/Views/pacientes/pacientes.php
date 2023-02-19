@@ -1,8 +1,12 @@
-<div class="pd-30">
-    <h4 class="tx-gray-800 mg-b-5">Pacientes</h4>
+<div class="pd-t-30 pd-l-60">
+    <h4 class="tx-gray-800 mg-b-5">
+        Pacientes
+    </h4>
 </div>
 
-<div class="br-pagebody mg-t-5 pd-x-30">
+
+
+<div class="br-pagebody mg-t-5 pd-x-30 mb-5">
     <div class="br-pagebody">
         <div class="br-section-wrapper">
             <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10 mb-5 d-flex justify-content-between">

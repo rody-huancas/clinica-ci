@@ -1,6 +1,14 @@
-<div class="pd-30">
-    <h4 class="tx-gray-800 mg-b-5"><?php echo $titulo ?></h4>
+<div class="pd-t-30 pd-l-60">
+    <h4 class="tx-gray-800 mg-b-5">
+        <?php
+
+        use CodeIgniter\HTTP\Response;
+
+        echo $titulo; ?>
+    </h4>
 </div>
+
+
 
 <div class="br-pagebody mg-t-5 pd-x-30">
     <div class="br-pagebody">
@@ -64,7 +72,7 @@
                 <div class="lh-3 mg-b-20">
                     <div class="tile-body">
                         <form id="formEspecialidad" name="formEspecialidad" method="POST">
-                        <input type="hidden" name="id_" id="idEspecialidad" value="" >
+                            <input type="hidden" name="id_" id="idEspecialidad" value="">
                             <div class="form-group">
                                 <label class="form-control-label">Nombre: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" id="especialidad" name="especialidad" placeholder="Ingresar Nombre">
@@ -96,23 +104,22 @@
 </div>
 
 <script>
+    let mensaje = "<?php echo session()->get("mensaje") ?>"
+    let texto = "<?php echo session()->get("texto") ?>"
 
-let mensaje = "<?php echo session()->get("mensaje") ?>"
-  let texto = "<?php echo session()->get("texto") ?>"
-
-  if (mensaje == "1") {
-    Swal.fire({
-      icon: 'success',
-      title: 'Confirmación',
-      text: texto,
-    });
-  } else if (mensaje == "0") {
-    Swal.fire({
-      icon: 'error',
-      title: 'Alerta',
-      text: texto,
-    });
-  }
+    if (mensaje == "1") {
+        Swal.fire({
+            icon: 'success',
+            title: 'Confirmación',
+            text: texto,
+        });
+    } else if (mensaje == "0") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Alerta',
+            text: texto,
+        });
+    }
 
 
     function registrarDatos() {
@@ -139,50 +146,50 @@ let mensaje = "<?php echo session()->get("mensaje") ?>"
         });
     }
 
-    
-  function verEspecialidad(id){
-      $('#titleModal').text("Actualizar Especialidad");
-      $('#btnActionForm').text("Actualizar Datos");
-      $.ajax({
-      url:'<?php echo base_url() ?>/Especialidad/obtenerEspecialidad/' + id,
-      method: 'POST',
-      dataType:'json',
-      success: function(response) {
-          $('#idEspecialidad').val(response.consulta.idTipoEspecialidad);
-          $('#especialidad').val(response.consulta.nombre);
-          $('#listStatus').val(response.consulta.estado);
-          $('#btnActionForm').attr("onclick","actualizarEspecialidadID("+response.consulta.idTipoEspecialidad+")");
-          $('#modaldemo3').modal("show");
 
-      },
-      error: function(){
-        alert('Error inesperado');
-      }
-    });
-  }
+    function verEspecialidad(id) {
+        $('#titleModal').text("Actualizar Especialidad");
+        $('#btnActionForm').text("Actualizar Datos");
+        $.ajax({
+            url: '<?php echo base_url() ?>/Especialidad/obtenerEspecialidad/' + id,
+            method: 'POST',
+            dataType: 'json',
+            success: function(response) {
+                $('#idEspecialidad').val(response.consulta.idTipoEspecialidad);
+                $('#especialidad').val(response.consulta.nombre);
+                $('#listStatus').val(response.consulta.estado);
+                $('#btnActionForm').attr("onclick", "actualizarEspecialidadID(" + response.consulta.idTipoEspecialidad + ")");
+                $('#modaldemo3').modal("show");
 
-  function actualizarEspecialidadID(id){
-    $.ajax({
-        url:'<?php echo base_url() ?>/Especialidad/actualizarDatos/'+id,
-        method: 'POST',
-        dataType:'json',
-        data: $("#formEspecialidad").serialize(),
-        success: function(response) {
-        console.log(response);
-        if(response.statusCode == 200){
-          window.location.href = '<?php echo base_url()?>/Especialidad'
-        }else if(response.statusCode == 500){
-          $('#modaldemo3').modal("show");
-          if (response.errors.especialidad) {
-            $('#errEspecialidad').text(response.errors.especialidad);
-          }
-            
-        }
-      },
-        error: function(){
-        alert('Error inesperado al procesar el formulario');
-      }
-    });
+            },
+            error: function() {
+                alert('Error inesperado');
+            }
+        });
+    }
+
+    function actualizarEspecialidadID(id) {
+        $.ajax({
+            url: '<?php echo base_url() ?>/Especialidad/actualizarDatos/' + id,
+            method: 'POST',
+            dataType: 'json',
+            data: $("#formEspecialidad").serialize(),
+            success: function(response) {
+                console.log(response);
+                if (response.statusCode == 200) {
+                    window.location.href = '<?php echo base_url() ?>/Especialidad'
+                } else if (response.statusCode == 500) {
+                    $('#modaldemo3').modal("show");
+                    if (response.errors.especialidad) {
+                        $('#errEspecialidad').text(response.errors.especialidad);
+                    }
+
+                }
+            },
+            error: function() {
+                alert('Error inesperado al procesar el formulario');
+            }
+        });
     }
 
 

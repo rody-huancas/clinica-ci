@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap");
+/* Historia Clínica */
+.historia {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.datos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.datos__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.datos__historia {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2b95a2;
+}
+
+.datos__historia span {
+  margin-left: 0.1875rem;
+  color: #000103;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.titulo-item {
+  width: 80%;
+  margin: 0.5rem auto 1.5rem;
+  border-top: 0.1875rem solid #e9ecef;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.paciente,
+.familiar,
+.medico {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+}
+
+.paciente__item,
+.familiar__item,
+.medico__item {
+  color: #2d3952;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.paciente__item span,
+.familiar__item span,
+.medico__item span {
+  font-weight: 400;
+  text-transform: none;
+  margin-left: 0.1875rem;
+}

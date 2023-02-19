@@ -1,8 +1,16 @@
-<div class="pd-30">
-  <h4 class="tx-gray-800 mg-b-5"><?php echo $titulo ?></h4>
+<div class="pd-t-30 pd-l-60">
+  <h4 class="tx-gray-800 mg-b-5">
+    <?php
+
+    use CodeIgniter\HTTP\Response;
+
+    echo $titulo; ?>
+  </h4>
 </div>
 
-<div class="br-pagebody mg-t-5 pd-x-30">
+
+
+<div class="br-pagebody mg-t-5 pd-x-30 mb-5">
   <div class="br-pagebody">
     <div class="br-section-wrapper">
       <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10 mb-5 d-flex justify-content-between">
@@ -59,7 +67,7 @@
         <div class="lh-3 mg-b-20">
           <div class="tile-body">
             <form id="formTipoPersonal" name="formTipoPersonal" method="POST">
-              <input type="hidden" name="id_" id="idTipoPersonal" value="" >
+              <input type="hidden" name="id_" id="idTipoPersonal" value="">
               <div class="form-group">
                 <label class="form-control-label">Nombre: <span class="tx-danger">*</span></label>
                 <input class="form-control" type="text" id="tipoPersonal" name="tipoPersonal" placeholder="Ingresar Nombre">
@@ -154,7 +162,7 @@
       success: function(response) {
         console.log(response);
         if (response.statusCode == 200) {
-          
+
           window.location.href = '<?php echo base_url() ?>/TipoPersonal'
         } else if (response.statusCode == 500) {
           if (response.errors.tipoPersonal) {
@@ -168,8 +176,8 @@
       }
     });
   }
-  
-  
+
+
 
   $('#datatable1').DataTable({
     "aProcessing": true,

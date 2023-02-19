@@ -1,8 +1,16 @@
-<div class="pd-30">
-    <h4 class="tx-gray-800 mg-b-5"><?php echo $titulo; ?></h4>
+<div class="pd-t-30 pd-l-60">
+    <h4 class="tx-gray-800 mg-b-5">
+        <?php
+
+        use CodeIgniter\HTTP\Response;
+
+        echo $titulo; ?>
+    </h4>
 </div>
 
-<div class="br-pagebody pd-x-30">
+
+
+<div class="br-pagebody pd-x-30 mb-5">
     <div class="br-pagebody">
         <div class="br-section-wrapper">
             <div class="form-layout form-layout-1">

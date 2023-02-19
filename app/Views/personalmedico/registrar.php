@@ -1,10 +1,12 @@
-<div class="pd-30">
-    <h4 class="tx-gray-800 mg-b-5">Registrar Nuevo Personal Medico</h4>
+<div class="pd-t-30 pd-l-30">
+    <h4 class="tx-gray-800 mg-b-5">
+        Registrar Nuevo Persona Médico
+    </h4>
 </div>
 
-<div class="br-pagebody pd-x-30">
+<div class="br-pagebody pd-x-30 mb-5">
     <div class="br-pagebody">
-    <?php error_reporting(0); ?>
+        <?php error_reporting(0); ?>
         <div class="br-section-wrapper">
             <div class="form-layout form-layout-1">
                 <form action="<?php echo base_url() ?>/personalmedico/registrarDatos" method="POST" enctype="multipart/form-data">
@@ -49,13 +51,13 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Genero: <span class="tx-danger">*</span></label>
-                                <select class="form-control select2" id="listGenero" name="listGenero" >
+                                <select class="form-control select2" id="listGenero" name="listGenero">
                                     <option label="Seleccione el género"></option>
-                                    <option value="1" <?php echo ($_REQUEST["listGenero"] == 1) ? "selected" : "" ?> >Masculino</option>
-                                    <option value="2" <?php echo ($_REQUEST["listGenero"] == 2) ? "selected" : "" ?> >Femenino</option>
+                                    <option value="1" <?php echo ($_REQUEST["listGenero"] == 1) ? "selected" : "" ?>>Masculino</option>
+                                    <option value="2" <?php echo ($_REQUEST["listGenero"] == 2) ? "selected" : "" ?>>Femenino</option>
                                 </select>
                                 <p id="errNom" style="color:red">
-                                <?php echo (isset($validation)) ? $validation->getError('listGenero') : ""; ?>
+                                    <?php echo (isset($validation)) ? $validation->getError('listGenero') : ""; ?>
                                 </p>
                             </div>
                         </div><!-- col-4 -->
@@ -65,7 +67,7 @@
                                 <label class="form-control-label">Fecha Nacimiento: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="date" id="edad" name="edad" placeholder="Ingrese la fecha de nacimiento" value="<?= set_value('edad') ?>">
                                 <p id="errNom" style="color:red">
-                                <?php echo (isset($validation)) ? $validation->getError('edad') : ""; ?>
+                                    <?php echo (isset($validation)) ? $validation->getError('edad') : ""; ?>
                                 </p>
                             </div>
                         </div><!-- col-8 -->
@@ -82,7 +84,7 @@
                                     <?php endforeach; ?>
                                 </select>
                                 <p id="errNom" style="color:red">
-                                <?php echo (isset($validation)) ? $validation->getError('listDocumento') : ""; ?>
+                                    <?php echo (isset($validation)) ? $validation->getError('listDocumento') : ""; ?>
                                 </p>
                             </div>
                         </div>
@@ -92,7 +94,7 @@
                                 <label class="form-control-label">Número de documeto: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" id="nroDocumento" name="nroDocumento" placeholder="Ingrese el número de documento" value="<?= set_value('nroDocumento') ?>">
                                 <p id="errNom" style="color:red">
-                                            <?php echo (isset($validation)) ? $validation->getError('nroDocumento') : ""; ?>
+                                    <?php echo (isset($validation)) ? $validation->getError('nroDocumento') : ""; ?>
                                 </p>
                             </div>
                         </div>
@@ -103,15 +105,15 @@
                                 <select class="form-control select2" id="listEspecialidad" name="listEspecialidad">
                                     <option label="Seleccione la Especialidad"></option>
                                     <?php foreach ($tipoespecialidad as $esp) : ?>
-                                        <?php if($esp["estado"] == 1){ ?>
-                                        <option value="<?php echo $esp["idTipoEspecialidad"] ?>" <?php echo ($_REQUEST["listEspecialidad"] == $esp["idTipoEspecialidad"]) ? "selected" : "" ?>>
-                                            <?php echo $esp["nombre"] ?>
-                                        </option>
+                                        <?php if ($esp["estado"] == 1) { ?>
+                                            <option value="<?php echo $esp["idTipoEspecialidad"] ?>" <?php echo ($_REQUEST["listEspecialidad"] == $esp["idTipoEspecialidad"]) ? "selected" : "" ?>>
+                                                <?php echo $esp["nombre"] ?>
+                                            </option>
                                         <?php } ?>
                                     <?php endforeach; ?>
                                 </select>
                                 <p id="errNom" style="color:red">
-                                <?php echo (isset($validation)) ? $validation->getError('listEspecialidad') : ""; ?>
+                                    <?php echo (isset($validation)) ? $validation->getError('listEspecialidad') : ""; ?>
                                 </p>
                             </div>
                         </div>
@@ -122,15 +124,15 @@
                                 <select class="form-control select2" id="listTipoPersonal" name="listTipoPersonal">
                                     <option label="Seleccione el Tipo de Personal"></option>
                                     <?php foreach ($tipotrabajador as $tra) : ?>
-                                        <option value="<?php echo $tra["idTipoTrabajador"] ?>" <?php echo ($_REQUEST["listTipoPersonal"] == $tra["idTipoTrabajador"]) ? "selected" : "" ?> >
+                                        <option value="<?php echo $tra["idTipoTrabajador"] ?>" <?php echo ($_REQUEST["listTipoPersonal"] == $tra["idTipoTrabajador"]) ? "selected" : "" ?>>
                                             <?php echo $tra["nombreTrabajador"]  ?>
                                         </option>
 
                                     <?php endforeach; ?>
-                                    
+
                                 </select>
                                 <p id="errNom" style="color:red">
-                                <?php echo (isset($validation)) ? $validation->getError('listTipoPersonal') : ""; ?>
+                                    <?php echo (isset($validation)) ? $validation->getError('listTipoPersonal') : ""; ?>
                                 </p>
                             </div>
                         </div>
@@ -141,12 +143,12 @@
                                 <label class="form-control-label">Estado: <span class="tx-danger">*</span></label>
                                 <select class="form-control select2" name="listStatus" id="listStatus">
                                     <option label="Seleccione el estado"></option>
-                                    <option value="1" <?php echo ($_REQUEST["listStatus"] == 1) ? "selected" : "" ?> >Activo</option>
-                                    <option value="2" <?php echo ($_REQUEST["listStatus"] == 2) ? "selected" : "" ?> >Inactivo</option>
-                                    
+                                    <option value="1" <?php echo ($_REQUEST["listStatus"] == 1) ? "selected" : "" ?>>Activo</option>
+                                    <option value="2" <?php echo ($_REQUEST["listStatus"] == 2) ? "selected" : "" ?>>Inactivo</option>
+
                                 </select>
                                 <p id="errNom" style="color:red">
-                                            <?php echo (isset($validation)) ? $validation->getError('listStatus') : ""; ?>
+                                    <?php echo (isset($validation)) ? $validation->getError('listStatus') : ""; ?>
                                 </p>
                             </div>
                         </div>

@@ -1,7 +1,12 @@
-<div class="pd-30">
-  <h4 class="tx-gray-800 mg-b-5"><?php echo $titulo ?></h4>
-</div>
+<div class="pd-t-30 pd-l-60">
+  <h4 class="tx-gray-800 mg-b-5">
+    <?php
 
+    use CodeIgniter\HTTP\Response;
+
+    echo $titulo; ?>
+  </h4>
+</div>
 
 <div class="br-pagebody mg-t-5 pd-x-30">
   <div class="br-pagebody">
@@ -117,8 +122,8 @@
       dataType: 'json',
       success: function(response) {
         if (response.statusCode == 200) {
-        window.location.href = '<?php echo base_url() ?>/PersonalMedico';
-        }else if (response.statusCode == 500) {
+          window.location.href = '<?php echo base_url() ?>/PersonalMedico';
+        } else if (response.statusCode == 500) {
           alert('Error inesperado al procesar el formulario');
 
         }

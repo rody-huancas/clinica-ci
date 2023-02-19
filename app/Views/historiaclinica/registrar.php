@@ -1,15 +1,15 @@
-<div class="pd-30">
+<div class="pd-t-30 pd-l-60">
     <h4 class="tx-gray-800 mg-b-5"><?php echo $titulo; ?></h4>
 </div>
 
 <div class="br-pagebody pd-x-30">
     <div class="br-pagebody">
-        <div class="br-section-wrapper">
+        <div class="br-section-wrapper mb-5">
             <div class="form-layout form-layout-1">
                 <form action="<?php echo base_url() ?>/historiaclinica/registrarDatos" method="POST" enctype="multipart/form-data">
                     <div class="row mg-b-25">
 
-                        <h4 class="col-12 tx-gray-800 border-top-secondary mt-3 mb-3">Datos del Paciente</h4>
+                        <h4 class="col-12 tx-gray-800 border-top-secondary mb-3">Datos del Paciente</h4>
 
                         <div class="col-lg-4">
                             <div class="form-group">

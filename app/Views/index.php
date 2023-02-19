@@ -17,15 +17,20 @@
   <link href="<?php echo base_url(); ?>/public/lib/rickshaw/rickshaw.min.css" rel="stylesheet" />
   <link href="<?php echo base_url(); ?>/public/lib/chartist/chartist.css" rel="stylesheet" />
 
+  <!-- estilos css -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/public/styles/estilos.css" />
+
   <!-- Bracket CSS -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>/public/dist/css/bracket.css" />
   <link rel="stylesheet" href="<?php echo base_url(); ?>/public/lib/sweetalert2/sweetalert2.css" />
   <script src="<?php echo base_url(); ?>/public/lib/sweetalert2/sweetalert2.js"></script>
 
+
   <script src="<?php echo base_url(); ?>/public/lib/jquery/jquery-1.js"></script>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/public/dist/js/DataTables-1.12.1/css/jquery.dataTables.css" />
   <script type="text/javascript" src="<?php echo base_url(); ?>/public/dist/js/DataTables-1.12.1/js/jquery.dataTables.js"></script>
 
+  <script src="https://kit.fontawesome.com/0a36c73c11.js" crossorigin="anonymous"></script>
 
 
 </head>

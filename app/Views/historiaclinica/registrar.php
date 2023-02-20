@@ -101,13 +101,13 @@
 
                         </div>
 
-                    
+
                         <input type="hidden" class="form-control form-control-sm" name="txt_IDPersonal" id="txt_IDPersonal">
 
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-control-label">Nombre: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" name="nombreMedico" id="nombreMedico" placeholder="Nombre del médico" disabled >
+                                <input class="form-control" type="text" name="nombreMedico" id="nombreMedico" placeholder="Nombre del médico" disabled>
                             </div>
                         </div><!-- col-8 -->
 
@@ -151,7 +151,7 @@
                         <input type="text" class="form-control form-control-sm" id="txtBusqueda" name="txtBusqueda" placeholder="nombres O apellidos OR documento" onkeyup="keyBusqueda(this.value)">
                     </form>
                 </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">X</span>
                 </button>
             </div>
@@ -178,9 +178,9 @@
     </div>
 </div>
 
+
 <script>
-    
-function keyBusqueda(val) {
+    function keyBusqueda(val) {
         if (val != "") {
             $.ajax({
                 url: "<?php echo base_url() ?>/historiaclinica/keyBusqueda/" + val,
@@ -213,7 +213,7 @@ function keyBusqueda(val) {
 
     }
 
-    
+
     function mostrarMedicoID(idPersonal) {
         $.ajax({
             url: "<?php echo base_url() ?>/historiaclinica/mostrarMedicoID/" + idPersonal,
@@ -225,11 +225,9 @@ function keyBusqueda(val) {
                 $('[name="txt_IDPersonal"]').val(response.personal.idPersonal);
                 $('[name="nombreMedico"]').val(response.personal.nombre).prop("disabled", true);
                 $('[name="especialidad"]').val(response.personal.especialidad).prop("disabled", true);
-              
+
             },
             error: function(jqXHR, textStatus, errorThrown) {}
         });
     }
-
-
 </script>

@@ -94,17 +94,27 @@
 
                         <h4 class="col-12 tx-gray-800 border-top-secondary mt-3 mb-3" style="border-top: 2px solid #E9ECEF; padding-top: 15px;">Datos del Médico</h4>
 
+                        <div class="col-lg-12">
+                            <a class="btn btn-app btn-info text-white mb-3 w-25" data-toggle="modal" data-target="#modalBusqueda" data-backdrop="static" data-keyboard="false">
+                                <i class="fas fa-search"></i>
+                                Buscar
+                            </a>
+
+                        </div>
+
+                        <input type="hidden" class="form-control form-control-sm" name="txt_IDPersonal" id="txt_IDPersonal" value="<?= $historia["idPersonal"] ?>">
+
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-control-label">Nombre: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" name="nombreMedico" id="nombreMedico" placeholder="Ingrese el nombre del médico">
+                                <input class="form-control" type="text" name="nombreMedico" id="nombreMedico" placeholder="Nombre del médico" value="<?= $historia["nombreMedico"] ?>" disabled>
                             </div>
                         </div><!-- col-8 -->
 
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-control-label">Especialidad: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="especialidad" name="especialidad" placeholder="Ingrese el número de especialidad">
+                                <input class="form-control" type="text" id="especialidad" name="especialidad" placeholder="Nombre de especialidad" value="<?= $historia["nombreEspecialidad"] ?>" disabled>
                             </div>
                         </div>
 
@@ -124,3 +134,97 @@
         <!-- br-section-wrapper -->
     </div>
 </div>
+
+<div class="modal form-modal w-100" id="modalBusqueda" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-lg w-100">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-sm-3">
+                    <h4 class="modal-title" id="title">Buscar cliente</h4>
+                </div>
+                <div class="col-sm-7">
+                    <form action='#' id="formBusqueda" autocomplete="off">
+                        <?= csrf_field() ?>
+                        <input type="text" class="form-control form-control-sm" id="txtBusqueda" name="txtBusqueda" placeholder="nombres O apellidos OR documento" onkeyup="keyBusqueda(this.value)">
+                    </form>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row justify-content-center">
+                    <div class="form-group col-md-12 ">
+                        <table class=" table table-bordered bg-light table-sm table-hover table-striped " id="tblBusqueda">
+                            <thead class="">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Medico</th>
+                                    <th>Especialidad</th>
+                                    <th class="text-center"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function keyBusqueda(val) {
+        if (val != "") {
+            $.ajax({
+                url: "<?php echo base_url() ?>/historiaclinica/keyBusqueda/" + val,
+                method: "post",
+                dataType: "json",
+                success: function(response) {
+                    $("#tblBusqueda>tbody").empty();
+                    let cont = 0;
+                    if (response.personal) {
+                        $.each(response.personal, function(idx, val) {
+                            cont++;
+                            $("#tblBusqueda>tbody").append("<tr>\
+                                                        <td>" + cont + "</td>\
+                                                        <td>" + val.medico + "</td>\
+                                                        <td>" + val.nombre + "</td>\
+                                                        <td class='text-center'>\
+                                                            <button class='btn btn-info btn-xs' onclick='mostrarMedicoID(" + val.idPersonal + ")'>\
+                                                            <i class='fas fa-arrow-circle-right'></i>\
+                                                            </button>\
+                                                        </td>\
+                                                        </tr>");
+                        });
+                    } else {
+                        $("#tblBusqueda>tbody").empty();
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {}
+            });
+        }
+
+    }
+
+
+    function mostrarMedicoID(idPersonal) {
+        $.ajax({
+            url: "<?php echo base_url() ?>/historiaclinica/mostrarMedicoID/" + idPersonal,
+            method: "post",
+            dataType: "json",
+            success: function(response) {
+                $("#modalBusqueda").modal("hide");
+                //limpiarForm();
+                $('[name="txt_IDPersonal"]').val(response.personal.idPersonal);
+                $('[name="nombreMedico"]').val(response.personal.nombre).prop("disabled", true);
+                $('[name="especialidad"]').val(response.personal.especialidad).prop("disabled", true);
+
+            },
+            error: function(jqXHR, textStatus, errorThrown) {}
+        });
+    }
+</script>

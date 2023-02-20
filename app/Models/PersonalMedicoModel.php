@@ -15,7 +15,7 @@ class PersonalMedicoModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nombre','apellidos','direccion','celular','genero','numeroDocumento','estado','fechaNac','idTipoEspecialidad','idTipoTrabajador','idTipoDocumento'];
+    protected $allowedFields = ['nombre', 'apellidos', 'direccion', 'celular', 'genero', 'numeroDocumento', 'estado', 'fechaNac', 'idTipoEspecialidad', 'idTipoTrabajador', 'idTipoDocumento'];
 
     protected $useTimestamps = true;
     protected $createdField  = null;
@@ -26,7 +26,8 @@ class PersonalMedicoModel extends Model
     protected $validationMessages = [];
     protected $skipValidation     = false;
 
-    public function getPersonal(){
+    public function getPersonal()
+    {
         $this->select("
                         personal.idPersonal,
                         personal.nombre,
@@ -52,35 +53,36 @@ class PersonalMedicoModel extends Model
         return $query;
     }
 
-    public function cantPersonalMedico(){
+    public function cantPersonalMedico()
+    {
         $this->select("count(idPersonal) as cant");
         //$this->where('usuario.estad != ',0);
         $query = $this->first();
         return $query['cant'];
-      }
+    }
 
-      public function getBusqueda($value)
-      {
-          $this->select("personal.idPersonal,
+    public function getBusqueda($value)
+    {
+        $this->select("personal.idPersonal,
                          concat_ws(' ', personal.nombre,personal.apellidos) as medico,
                          tipoespecialidad.nombre");
-  
-          $this->join("tipoespecialidad", "tipoespecialidad.idTipoEspecialidad = personal.idTipoEspecialidad");
-  
-          $this->like("personal.nombre", $value);
-          $this->orLike("personal.apellidos", $value);
-          $this->orLike("tipoespecialidad.nombre", $value);
-          $query = $this->findAll();
-          return $query;
-  
-          /**
-           * SELECT * FROM cliente
+
+        $this->join("tipoespecialidad", "tipoespecialidad.idTipoEspecialidad = personal.idTipoEspecialidad");
+
+        $this->like("personal.nombre", $value);
+        $this->orLike("personal.apellidos", $value);
+        $this->orLike("tipoespecialidad.nombre", $value);
+        $query = $this->findAll();
+        return $query;
+
+        /**
+         * SELECT * FROM cliente
   INNER JOIN persona ON persona.id_persona = cliente.id_persona
   WHERE persona.nombre LIKE '%a%'  or persona.apellidos LIKE '%a%' or persona.numeroDocumento LIKE '%2%'
-           */
-      }
+         */
+    }
 
-      public function getResultadosID($idPersonal)
+    public function getResultadosID($idPersonal)
     {
         $this->select("
                         personal.idPersonal,

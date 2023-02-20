@@ -106,6 +106,9 @@ class Historiaclinica extends BaseController
             $this->session->setFlashdata("texto", "Datos registrados correctamente");
 
             return redirect()->to(base_url() . "/historiaclinica");
+        } else {
+            $data["contenido"] = "historiaclinica/registrar";
+            return view("index", $data);
         }
     }
 
@@ -122,12 +125,13 @@ class Historiaclinica extends BaseController
     // ver registro
     public function verRegistro($id)
     {
-        $historia = $this->historia->where('idhistoria', $id)->first();
+        $historia = $this->historia->getResultado($id);
         $data["historia"] = $historia;
         $data["titulo"] = "Actualizar Historia Clínica";
         $data["contenido"] = "historiaclinica/actualizar";
         return view("index", $data);
     }
+
 
 
     // Actualizar Usuario
@@ -146,8 +150,7 @@ class Historiaclinica extends BaseController
             $parentezco = $this->request->getPost("parentezco");
             $telefono = $this->request->getPost("telefono");
             $dniPariente = $this->request->getPost("dniPariente");
-            $nombreMedico = $this->request->getPost("nombreMedico");
-            $especialidad = $this->request->getPost("especialidad");
+            $txt_IDPersonal = $this->request->getPost("txt_IDPersonal");
             $motivo = $this->request->getPost("motivo");
 
             // Calcular la edad a partir de la fecha de nacimiento
@@ -155,11 +158,8 @@ class Historiaclinica extends BaseController
             $hoy = new DateTime();
             $edad = $fechaNac->diff($hoy)->y;
 
-            // Generar código único
-            $cc_code = 'CC-' . str_pad($this->db->table('historiaclinica')->countAllResults() + 1, 7, '0', STR_PAD_LEFT);
 
             $data = [
-                "codigohistoria" => $cc_code,
                 "nombres" => $nombre,
                 "apellidos" => $apellidos,
                 "telefonoPaciente" => $telefonoPaciente,
@@ -172,14 +172,22 @@ class Historiaclinica extends BaseController
                 "telefono" => $telefono,
                 "dni" => $dni,
                 "dnifamiliar" => $dniPariente,
-                "idPersonal" => 100,
+                "idPersonal" => $txt_IDPersonal,
                 "motivo" => $motivo
             ];
 
             // Guardar registro en la base de datos
             $this->historia->update($id, $data);
+            $this->session->setFlashdata("mensaje", "1");
+            $this->session->setFlashdata("texto", "Datos actualizados correctamente");
 
             return redirect()->to(base_url() . "/historiaclinica");
+        } else {
+            $historia = $this->historia->getResultado($id);
+            $data["historia"] = $historia;
+            $data["titulo"] = "Actualizar Historia Clínica";
+            $data["contenido"] = "historiaclinica/actualizar";
+            return view("index", $data);
         }
     }
 
@@ -207,12 +215,12 @@ class Historiaclinica extends BaseController
         $pdf->Cell(195, 5, "Reporte de Usuarios", 0, 1, 'C');
         $pdf->SetFont('Arial', 'B', 9);
 
-        $this->response->setHeader('Content-Type', 'application/pdf');
+        // $this->response->setHeader('Content-Type', 'application/pdf');
         $pdf->Output("Orden.pdf", "I");
     }
 
-    
-   
+
+
 
     // Eliminar datos
     public function eliminarRegistro($id)

@@ -246,3 +246,19 @@ CRITICAL - 2023-02-19 18:54:05 --> Attempt to read property "CSPEnabled" on stri
 #4 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2023-02-19 19:42:39 --> Undefined property: FPDF::$CSPEnabled
+#0 C:\laragon\www\ProyectoClinica_ci\system\HTTP\Response.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\laragon\\www\\...', 157)
+#1 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(195): CodeIgniter\HTTP\Response->__construct(Object(FPDF))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->generarPDF(' 4')
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#4 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2023-02-19 19:42:54 --> Undefined property: FPDF::$CSPEnabled
+#0 C:\laragon\www\ProyectoClinica_ci\system\HTTP\Response.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\laragon\\www\\...', 157)
+#1 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(196): CodeIgniter\HTTP\Response->__construct(Object(FPDF))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->generarPDF(' 4')
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#4 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}

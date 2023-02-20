@@ -58,4 +58,52 @@ class PersonalMedicoModel extends Model
         $query = $this->first();
         return $query['cant'];
       }
+
+      public function getBusqueda($value)
+      {
+          $this->select("personal.idPersonal,
+                         concat_ws(' ', personal.nombre,personal.apellidos) as medico,
+                         tipoespecialidad.nombre");
+  
+          $this->join("tipoespecialidad", "tipoespecialidad.idTipoEspecialidad = personal.idTipoEspecialidad");
+  
+          $this->like("personal.nombre", $value);
+          $this->orLike("personal.apellidos", $value);
+          $this->orLike("tipoespecialidad.nombre", $value);
+          $query = $this->findAll();
+          return $query;
+  
+          /**
+           * SELECT * FROM cliente
+  INNER JOIN persona ON persona.id_persona = cliente.id_persona
+  WHERE persona.nombre LIKE '%a%'  or persona.apellidos LIKE '%a%' or persona.numeroDocumento LIKE '%2%'
+           */
+      }
+
+      public function getResultadosID($idPersonal)
+    {
+        $this->select("
+                        personal.idPersonal,
+                        personal.nombre,
+                        personal.apellidos,
+                        personal.direccion,
+                        personal.celular,
+                        personal.genero,
+                        personal.numeroDocumento,
+                        personal.estado,
+                        personal.fechaNac,
+                        personal.idTipoEspecialidad,
+                        personal.idTipoDocumento,
+                        personal.idTipoTrabajador,
+                        tipoespecialidad.nombre as especialidad,
+                        tipodocumento.NombreDocumento,
+                        tipotrabajador.nombreTrabajador,      
+        ");
+        $this->join("tipoespecialidad", "tipoespecialidad.idTipoEspecialidad= personal.idTipoEspecialidad");
+        $this->join("tipodocumento", "tipodocumento.idTipoDocumento = personal.idTipoDocumento");
+        $this->join("tipotrabajador", "tipotrabajador.idTipoTrabajador = personal.idTipoTrabajador");
+        $this->where("personal.idPersonal", $idPersonal);
+        $query = $this->first();
+        return $query;
+    }
 }

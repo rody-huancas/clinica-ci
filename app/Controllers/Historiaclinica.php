@@ -104,11 +104,6 @@ class Historiaclinica extends BaseController
     }
 
 
-    // Actualizar Usuario
-    public function actualizarDatos($id)
-    {
-    }
-
     // Eliminar datos
     public function eliminarRegistro($id)
     {

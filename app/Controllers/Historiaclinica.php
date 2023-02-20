@@ -57,6 +57,9 @@ class Historiaclinica extends BaseController
     // Registrar datos
     public function registrarDatos()
     {
+        // Establecer la zona horaria
+        date_default_timezone_set('America/Lima');
+
         if ($this->request->getMethod() == "post") {
             $nombre = $this->request->getPost("nombre");
             $apellidos = $this->request->getPost("apellidos");

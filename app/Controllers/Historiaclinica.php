@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\HistoriaClinicaModel;
+use App\Models\PersonalMedicoModel;
 use DateTime;
 
 class Historiaclinica extends BaseController
@@ -10,6 +11,7 @@ class Historiaclinica extends BaseController
     protected $historia;
     protected $session;
     protected $db;
+    protected $personalmedico;
 
     public function __construct()
     {
@@ -18,6 +20,7 @@ class Historiaclinica extends BaseController
             die();
         }
         $this->historia = new HistoriaClinicaModel();
+        $this->personalmedico = new PersonalMedicoModel();
         $this->session = \Config\Services::session();
         $this->db = \Config\Database::connect();
         helper('text');
@@ -39,6 +42,18 @@ class Historiaclinica extends BaseController
         return view("index", $data);
     }
 
+    public function keyBusqueda($value)
+    {
+        $query = $this->personalmedico->getBusqueda($value);
+        return json_encode(array("personal" => $query));
+    }
+
+    public function mostrarMedicoID($idPersonal)
+    {
+        $query = $this->personalmedico->getResultadosID($idPersonal);
+        return json_encode(array("personal" => $query));
+    }
+
     // Registrar datos
     public function registrarDatos()
     {
@@ -54,8 +69,7 @@ class Historiaclinica extends BaseController
             $parentezco = $this->request->getPost("parentezco");
             $telefono = $this->request->getPost("telefono");
             $dniPariente = $this->request->getPost("dniPariente");
-            $nombreMedico = $this->request->getPost("nombreMedico");
-            $especialidad = $this->request->getPost("especialidad");
+            $txt_IDPersonal = $this->request->getPost("txt_IDPersonal");
             $motivo = $this->request->getPost("motivo");
 
             // Calcular la edad a partir de la fecha de nacimiento
@@ -82,12 +96,14 @@ class Historiaclinica extends BaseController
                 "telefono" => $telefono,
                 "dni" => $dni,
                 "dnifamiliar" => $dniPariente,
-                "idPersonal" => 100,
+                "idPersonal" => $txt_IDPersonal,
                 "motivo" => $motivo
             ];
 
             // Guardar registro en la base de datos
             $this->historia->save($data);
+            $this->session->setFlashdata("mensaje", "1");
+            $this->session->setFlashdata("texto", "Datos registrados correctamente");
 
             return redirect()->to(base_url() . "/historiaclinica");
         }
@@ -112,6 +128,7 @@ class Historiaclinica extends BaseController
         $data["contenido"] = "historiaclinica/actualizar";
         return view("index", $data);
     }
+
 
     // Actualizar Usuario
     public function actualizarDatos($id)
@@ -193,6 +210,9 @@ class Historiaclinica extends BaseController
         $this->response->setHeader('Content-Type', 'application/pdf');
         $pdf->Output("Orden.pdf", "I");
     }
+
+    
+   
 
     // Eliminar datos
     public function eliminarRegistro($id)

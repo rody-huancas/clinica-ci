@@ -16,6 +16,51 @@ CRITICAL - 2023-02-19 12:55:42 --> Class "App\Controllers\DateTime" not found
 #2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
 #4 {main}
+<<<<<<< HEAD
+ERROR - 2023-02-19 16:22:51 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+CRITICAL - 2023-02-19 16:22:51 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\laragon\www\ProyectoClinica_ci\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(59): CodeIgniter\BaseModel->first()
+#5 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#6 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-02-19 16:23:22 --> Undefined array key "telefonoPaciente"
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\historiaclinica\historiaclinica.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 60)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('historiaclinica...', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(164): view('historiaclinica...')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(31): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->index()
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-02-19 17:56:09 --> Undefined array key "nombre"
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\historiaclinica\actualizar.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 17)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('historiaclinica...', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(164): view('historiaclinica...')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(111): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->verRegistro('1')
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+=======
 CRITICAL - 2023-02-19 18:18:18 --> Class "FPDF" not found
 #0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->mostrarPDF('4')
 #1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
@@ -262,3 +307,262 @@ CRITICAL - 2023-02-19 19:42:54 --> Undefined property: FPDF::$CSPEnabled
 #4 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 {main}
+>>>>>>> 37c5c20ec03a459735c09876bfa5369ab470ba57
+ERROR - 2023-02-19 21:21:52 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:21:52 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('a')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('a')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:21:53 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:21:53 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('al')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('al')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:21:56 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:21:56 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('a')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('a')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:21:57 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:21:57 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('al')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('al')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:21:57 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:21:57 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('alv')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('alv')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:21:57 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:21:57 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('alva')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('alva')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:21:57 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:21:57 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('alvar')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('alvar')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:21:57 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:21:57 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('alvaro')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('alvaro')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:26:16 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:26:16 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('a')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('a')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:26:16 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:26:16 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('ad')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('ad')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:26:17 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:26:17 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('a')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('a')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:26:18 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:26:18 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('al')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('al')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:26:18 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:26:18 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('alv')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('alv')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:26:22 --> Not unique table/alias: 'personal'
+CRITICAL - 2023-02-19 21:26:22 --> Not unique table/alias: 'personal'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\PersonalMedicoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(204): App\Models\PersonalMedicoModel->getBusqueda('f')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->keyBusqueda('f')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-02-19 21:56:08 --> Column 'idPersonal' cannot be null
+CRITICAL - 2023-02-19 21:56:08 --> Column 'idPersonal' cannot be null
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\ProyectoClinica_ci\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(105): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->registrarDatos()
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-02-19 21:56:57 --> Column 'idPersonal' cannot be null
+CRITICAL - 2023-02-19 21:56:57 --> Column 'idPersonal' cannot be null
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\ProyectoClinica_ci\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(105): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->registrarDatos()
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-02-19 21:58:38 --> Column 'idPersonal' cannot be null
+CRITICAL - 2023-02-19 21:58:38 --> Column 'idPersonal' cannot be null
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `hi...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hi...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hi...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hi...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\ProyectoClinica_ci\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(105): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->registrarDatos()
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}

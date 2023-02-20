@@ -40,9 +40,9 @@
                                     <tr>
                                         <td class="d-flex">
                                             <a href="#" class="btn btn-danger btn-sm"><i class="icon ion-close"></i></a>
-                                            <a href="#" class="btn btn-primary btn-sm ml-1"><i class="icon ion-edit"></i></a>
+                                            <a href="<?php echo base_url() ?>/historiaclinica/VerRegistro/<?php echo $row["idhistoria"]; ?>" class="btn btn-primary btn-sm ml-1"><i class="icon ion-edit"></i></a>
                                             <a href="<?php echo base_url() ?>/historiaclinica/visualizar/<?php echo $row["idhistoria"] ?>" class="btn btn-info btn-sm ml-1"><i class="icon ion-eye"></i></a>
-                                            <a href="#" class="btn btn-success btn-sm ml-1"><i class="fa-sharp fa-regular fa-file-pdf"></i></a>
+                                            <a href="<?php echo base_url() ?>/historiaclinica/mostrarPDF/<?= $row["idhistoria"]; ?>" class="btn btn-success btn-sm ml-1"><i class="fa-sharp fa-regular fa-file-pdf"></i></a>
                                         </td>
                                         <td class="text-center">
                                             <?php echo $cont ?></php>
@@ -69,7 +69,7 @@
                                             <?php echo $row["direccion"]; ?>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo $row["dni"]; ?>
+                                            <?php echo $row["motivo"]; ?>
                                         </td>
 
                                     </tr>

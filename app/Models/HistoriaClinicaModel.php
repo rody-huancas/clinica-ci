@@ -23,6 +23,7 @@ class HistoriaClinicaModel extends Model
         'edad',
         'fechaNac',
         'distrito',
+        'departamento',
         'direccion',
         'fechaCreacion',
         'provincia',
@@ -32,7 +33,8 @@ class HistoriaClinicaModel extends Model
         'dni',
         'dnifamiliar',
         'idPersonal',
-        'motivo'
+        'motivo',
+        'origen'
     ];
 
     protected $useTimestamps = true;
@@ -55,6 +57,7 @@ class HistoriaClinicaModel extends Model
             historiaclinica.edad,
             historiaclinica.fechaNac,
             historiaclinica.distrito,
+            historiaclinica.departamento,
             historiaclinica.direccion,
             historiaclinica.fechaCreacion,
             historiaclinica.provincia,
@@ -65,7 +68,8 @@ class HistoriaClinicaModel extends Model
             historiaclinica.dnifamiliar,
             historiaclinica.idPersonal,
             historiaclinica.motivo,
-            personal.nombre as nombreMedico,
+            historiaclinica.origen,
+            concat_ws(' ', personal.nombre,personal.apellidos) as nombreMedico,
             tipoespecialidad.nombre as nombreEspecialidad
         ");
         $this->join('personal', 'historiaclinica.idPersonal = personal.idPersonal');

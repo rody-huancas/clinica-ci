@@ -31,7 +31,8 @@
                                     <th class="text-center wd-10p">Edad</th>
                                     <th class="text-center wd-15p">Fecha de Nacimiento</th>
                                     <th class="text-center wd-10p">Dirección</th>
-                                    <th class="text-center wd-20p">Motivo</th>
+                                    <th class="text-center wd-50p">Motivo</th>
+                                    <th class="text-center wd-20p">Origen</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -69,6 +70,9 @@
                                         </td>
                                         <td class="text-center">
                                             <?php echo $row["motivo"]; ?>
+                                        </td>
+                                        <td class="text-center">
+                                            <?php echo $row["origen"]; ?>
                                         </td>
 
                                     </tr>

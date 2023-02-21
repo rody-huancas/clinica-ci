@@ -63,6 +63,13 @@
 
                         <div class="col-lg-4">
                             <div class="form-group">
+                                <label class="form-control-label">Departamento: <span class="tx-danger">*</span></label>
+                                <input class="form-control" type="text" name="departamento" id="departamento" placeholder="Ingrese el distrito" value="<?= $historia["departamento"] ?>">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
                                 <label class="form-control-label">Provincia: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="provincia" id="provincia" placeholder="Ingrese la provincia" value="<?= $historia["provincia"] ?>">
                             </div>

@@ -57,7 +57,10 @@ class Historiaclinica extends BaseController
     // Registrar datos
     public function registrarDatos()
     {
-        
+
+        // Establecer la zona horaria
+        // date_default_timezone_set('America/Lima');
+
         if ($this->request->getMethod() == "post") {
             $nombre = $this->request->getPost("nombre");
             $apellidos = $this->request->getPost("apellidos");
@@ -66,12 +69,14 @@ class Historiaclinica extends BaseController
             $direccion = $this->request->getPost("direccion");
             $fecha = $this->request->getPost("fecha");
             $distrito = $this->request->getPost("distrito");
+            $departamento = $this->request->getPost("departamento");
             $provincia = $this->request->getPost("provincia");
             $parentezco = $this->request->getPost("parentezco");
             $telefono = $this->request->getPost("telefono");
             $dniPariente = $this->request->getPost("dniPariente");
             $txt_IDPersonal = $this->request->getPost("txt_IDPersonal");
             $motivo = $this->request->getPost("motivo");
+            $origen = $this->request->getPost("origen");
 
             // Calcular la edad a partir de la fecha de nacimiento
             $fechaNac = new DateTime($fecha);
@@ -89,6 +94,7 @@ class Historiaclinica extends BaseController
                 "edad" => $edad,
                 "fechaNac" => $fecha,
                 "distrito" => $distrito,
+                "departamento" => $departamento,
                 "direccion" => $direccion,
                 "fechaCreacion" => date('d/m/y'),
                 "horaCreacion" => date('H:i:s'),
@@ -98,7 +104,8 @@ class Historiaclinica extends BaseController
                 "dni" => $dni,
                 "dnifamiliar" => $dniPariente,
                 "idPersonal" => $txt_IDPersonal,
-                "motivo" => $motivo
+                "motivo" => $motivo,
+                "origen" => $origen
             ];
 
             // Guardar registro en la base de datos
@@ -111,16 +118,6 @@ class Historiaclinica extends BaseController
             $data["contenido"] = "historiaclinica/registrar";
             return view("index", $data);
         }
-    }
-
-
-    public function visualizar($id)
-    {
-        $historia = $this->historia->where('idhistoria', $id)->first();
-        $data["historia"] = $historia;
-        $data["titulo"] = "Historía Clínica";
-        $data["contenido"] = "historiaclinica/visualizar";
-        return view("index", $data);
     }
 
     // ver registro
@@ -147,12 +144,14 @@ class Historiaclinica extends BaseController
             $direccion = $this->request->getPost("direccion");
             $fecha = $this->request->getPost("fecha");
             $distrito = $this->request->getPost("distrito");
+            $departamento = $this->request->getPost("departamento");
             $provincia = $this->request->getPost("provincia");
             $parentezco = $this->request->getPost("parentezco");
             $telefono = $this->request->getPost("telefono");
             $dniPariente = $this->request->getPost("dniPariente");
             $txt_IDPersonal = $this->request->getPost("txt_IDPersonal");
             $motivo = $this->request->getPost("motivo");
+            $origen = $this->request->getPost("origen");
 
             // Calcular la edad a partir de la fecha de nacimiento
             $fechaNac = new DateTime($fecha);
@@ -167,6 +166,7 @@ class Historiaclinica extends BaseController
                 "edad" => $edad,
                 "fechaNac" => $fecha,
                 "distrito" => $distrito,
+                "departamento" => $departamento,
                 "direccion" => $direccion,
                 "provincia" => $provincia,
                 "parentezco" => $parentezco,
@@ -174,7 +174,8 @@ class Historiaclinica extends BaseController
                 "dni" => $dni,
                 "dnifamiliar" => $dniPariente,
                 "idPersonal" => $txt_IDPersonal,
-                "motivo" => $motivo
+                "motivo" => $motivo,
+                "origen" => $origen
             ];
 
             // Guardar registro en la base de datos
@@ -190,6 +191,15 @@ class Historiaclinica extends BaseController
             $data["contenido"] = "historiaclinica/actualizar";
             return view("index", $data);
         }
+    }
+
+    public function visualizar($id)
+    {
+        $historia = $this->historia->getResultado($id);
+        $data["historia"] = $historia;
+        $data["titulo"] = "Historía Clínica";
+        $data["contenido"] = "historiaclinica/visualizar";
+        return view("index", $data);
     }
 
 

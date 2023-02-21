@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap");
+
+:root {
+  --color-title: #2d3952;
+  --color-paragraph: #606a86;
+  --color-border: #e9ecef;
+}
+
+.historia {
+  color: var(--color-title);
+  font-family: "Poppins", sans-serif;
+}
+
+.historia__container-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hitoria__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.historia__item {
+  font-weight: 700;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.historia__item span {
+  font-weight: 400;
+  color: var(--color-paragraph);
+}
+
+.historia__group {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.historia__titulo {
+  width: 90%;
+  border-top: 0.125rem solid var(--color-border);
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.historia__container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-left: 5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 775px) {
+  .historia__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 445px) {
+  .historia__container {
+    margin-left: 0;
+  }
+}
+
+.historia__boton {
+  display: flex;
+  justify-content: right;
+  margin-top: 2rem;
+}
+
+.historia__btn {
+  background-color: var(--color-title);
+  color: var(--color-border);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.625rem;
+  transition: all 0.5s ease;
+}
+
+.historia__btn:hover {
+  background-color: #fff;
+  color: var(--color-title);
+  border: 0.125rem solid var(--color-title);
+  font-weight: 500;
+}
+
+@media print {
+  .historia__boton {
+    display: none !important;
+  }
+}

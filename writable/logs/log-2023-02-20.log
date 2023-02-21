@@ -437,6 +437,7 @@ CRITICAL - 2023-02-20 11:50:55 --> Cannot add or update a child row: a foreign k
 #11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
 #13 {main}
+<<<<<<< HEAD
 ERROR - 2023-02-20 13:06:30 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
 CRITICAL - 2023-02-20 13:06:30 --> Unable to connect to the database.
 Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
@@ -450,3 +451,48 @@ Main connection [MySQLi]: Access denied for user '****'@'localhost' (using passw
 #7 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
+=======
+CRITICAL - 2023-02-20 15:28:46 --> Call to undefined function link_tag()
+#0 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include()
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('historiaclinica...', Array, true)
+#3 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(161): view('historiaclinica...')
+#4 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(201): view('index', Array)
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->visualizar('5')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-02-20 15:29:00 --> Call to undefined function link_tag()
+#0 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include()
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('historiaclinica...', Array, true)
+#3 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(161): view('historiaclinica...')
+#4 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(201): view('index', Array)
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->visualizar('5')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+>>>>>>> 381cce8e75986958ad183f4ae91f998f52a5c409
+CRITICAL - 2023-02-20 22:05:29 --> Undefined array key "origen"
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\historiaclinica\historiaclinica.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 75)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('historiaclinica...', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(165): view('historiaclinica...')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(34): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->index()
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}

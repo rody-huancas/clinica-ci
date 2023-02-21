@@ -62,6 +62,13 @@
 
                         <div class="col-lg-4">
                             <div class="form-group">
+                                <label class="form-control-label">Departamento: <span class="tx-danger">*</span></label>
+                                <input class="form-control" type="text" name="departamento" id="departamento" placeholder="Ingrese el departamento">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
                                 <label class="form-control-label">Provincia: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="provincia" id="provincia" placeholder="Ingrese la provincia">
                             </div>
@@ -104,17 +111,24 @@
 
                         <input type="hidden" class="form-control form-control-sm" name="txt_IDPersonal" id="txt_IDPersonal">
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Nombre: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="nombreMedico" id="nombreMedico" placeholder="Nombre del médico" disabled>
                             </div>
                         </div><!-- col-8 -->
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Especialidad: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" id="especialidad" name="especialidad" placeholder="Nombre de especialidad" disabled>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="form-control-label">Origen: <span class="tx-danger">*</span></label>
+                                <input class="form-control" type="text" id="origen" name="origen" placeholder="Origen">
                             </div>
                         </div>
 

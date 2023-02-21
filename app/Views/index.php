@@ -18,7 +18,8 @@
   <link href="<?php echo base_url(); ?>/public/lib/chartist/chartist.css" rel="stylesheet" />
 
   <!-- estilos css -->
-  <link rel="stylesheet" href="<?php echo base_url(); ?>/public/styles/estilos.css" />
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/public/css/style.css?v=<?php echo rand(); ?>" />
+  >
 
   <!-- Bracket CSS -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>/public/dist/css/bracket.css" />

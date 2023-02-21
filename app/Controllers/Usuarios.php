@@ -69,10 +69,10 @@ class Usuarios extends BaseController
                 "fechaNac" => $txtEdad,
                 "nombreDocumento" => $txtDocumento,
                 "numeroDocumento" => $txtNroDocumento,
-                "nombreUsuario" => $txtNombreUsuario,
+                "nameUser" => $txtNombreUsuario,
                 "password" => $txtPassword,
-                "rol" => $txtRol,
-                "status" => $txtEstado
+                "nombreRol" => $txtRol,
+                "estado" => $txtEstado
             ];
 
             

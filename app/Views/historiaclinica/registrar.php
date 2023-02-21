@@ -143,7 +143,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <div class="col-sm-3">
-                    <h4 class="modal-title" id="title">Buscar cliente</h4>
+                    <h4 class="modal-title" id="title">Buscar Medico</h4>
                 </div>
                 <div class="col-sm-7">
                     <form action='#' id="formBusqueda" autocomplete="off">

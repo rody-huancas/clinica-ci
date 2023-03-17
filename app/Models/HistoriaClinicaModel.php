@@ -84,7 +84,8 @@ class HistoriaClinicaModel extends Model
         $this->select("historiaclinica.idhistoria,
                          concat_ws(' ', historiaclinica.nombres, historiaclinica.apellidos) as paciente,
                          personal.nombre,
-                         historiaclinica.motivo");
+                         historiaclinica.motivo,
+                         historiaclinica.dni");
 
         $this->join("personal", "personal.idPersonal = historiaclinica.idPersonal");
 
@@ -92,6 +93,7 @@ class HistoriaClinicaModel extends Model
         $this->orLike("historiaclinica.apellidos", $value);
         $this->orLike("personal.nombre", $value);
         $this->orLike("historiaclinica.motivo", $value);
+        $this->orLike("historiaclinica.dni", $value);
         $query = $this->findAll();
         return $query;
 

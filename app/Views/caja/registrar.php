@@ -124,7 +124,8 @@
                                     <th>#</th>
                                     <th>Nombre completo del paciente</th>
                                     <th>Nombre del médico</th>
-                                    <th>Descripción</th>
+                                    <th>Motivo</th>
+                                    <th>Dni</th>
                                     <th class="text-center"></th>
                                 </tr>
                             </thead>
@@ -157,6 +158,7 @@
                                                         <td>" + val.paciente + "</td>\
                                                         <td>" + val.nombre + "</td>\
                                                         <td>" + val.motivo + "</td>\
+                                                        <td>" + val.dni + "</td>\
                                                         <td class='text-center'>\
                                                             <button class='btn btn-info btn-xs' onclick='mostrarPacienteID(" + val.idhistoria + ")'>\
                                                             <i class='fas fa-arrow-circle-right'></i>\

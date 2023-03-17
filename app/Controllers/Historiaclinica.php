@@ -243,34 +243,85 @@ class Historiaclinica extends BaseController
         $pdf->SetFont('Arial', '', 11);
         $pdf->Cell(160, -40, utf8_decode($clinica['horaCreacion']), 0, 0, 'R');
 
+        $pdf->Cell(0, 0, "", 0, 1, 'C');
+
         // Datos del Paciente
         $pdf->Line(10, 65, 200, 65);
         $pdf->SetFont('Arial', 'B', 11);
-        $pdf->Cell(-100, 10, utf8_decode("DATOS DEL PACIENTE "), 0, 1, 'R');
+        $pdf->Cell(0, 0, utf8_decode("DATOS DEL PACIENTE "), 0, 1, 'L');
         // nombre
-        $pdf->Cell(33, 15, utf8_decode("Nombre: "), 0, 1, 'R');
+        $pdf->Cell(20, 20, utf8_decode("Nombre: "), 0, 1, 'L');
         $pdf->SetFont('Arial', '', 11);
-        $pdf->Cell(42, -15, utf8_decode($clinica['nombres']), 0, 0, 'R');
+        $pdf->Cell(20, -5, utf8_decode($clinica["nombres"] ? $clinica["nombres"] : ""), 0, 0, 'L');
         // apellidos
         $pdf->SetFont('Arial', 'B', 11);
-        $pdf->Cell(65, -15, utf8_decode("Apellidos: "), 0, 1, 'R');
+        $pdf->Cell(158, -20, utf8_decode("Apellidos: "), 0, 1, 'C');
         $pdf->SetFont('Arial', '', 11);
-        $pdf->Cell(123, 15, utf8_decode($clinica['apellidos']), 0, 0, 'R');
+        $pdf->Cell(0, 35, utf8_decode($clinica["apellidos"] ? $clinica["apellidos"] : ""), 0, 0, 'C');
         // dni
         $pdf->SetFont('Arial', 'B', 11);
-        $pdf->Cell(27, 15, utf8_decode("DNI: "), 0, 1, 'R');
+        $pdf->Cell(-15, 20, utf8_decode("DNI: "), 0, 1, 'R');
         $pdf->SetFont('Arial', '', 11);
-        $pdf->Cell(168, -15, utf8_decode($clinica['dni']), 0, 0, 'R');
+        $pdf->Cell(180, -5, utf8_decode($clinica["dni"] ? $clinica["dni"] : ""), 0, 0, 'R');
+
+        $pdf->Cell(0, 5, "", 0, 1, 'C');
+
+        // fecha nacimiento
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(20, 10, utf8_decode("Fecha De Nacimiento: "), 0, 1, 'L');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(20, 5, utf8_decode($clinica["fechaNac"] ? $clinica["fechaNac"] : ""), 0, 0, 'L');
+        // edad
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(158, -10, utf8_decode("Edad: "), 0, 1, 'C');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(0, 25, utf8_decode($clinica["edad"] ? $clinica["edad"] : ""), 0, 0, 'C');
         // dni
         $pdf->SetFont('Arial', 'B', 11);
-        $pdf->Cell(-112, 5, utf8_decode("Fecha de Nacimiento: "), 0, 1, 'R');
+        $pdf->Cell(-15, 10, utf8_decode("Dirección: "), 0, 1, 'R');
         $pdf->SetFont('Arial', '', 11);
-        $pdf->Cell(78, -5, utf8_decode($clinica['fechaNac']), 0, 0, 'R');
+        $pdf->Cell(180, 5, utf8_decode($clinica["direccion"] ? $clinica["direccion"] : ""), 0, 0, 'R');
 
+        $pdf->Cell(0, 5, "", 0, 1, 'C');
 
+        // fecha nacimiento
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(20, 20, utf8_decode("Distrito: "), 0, 1, 'L');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(20, -5, utf8_decode($clinica["distrito"] ? $clinica["distrito"] : ""), 0, 0, 'L');
+        // edad
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(158, -20, utf8_decode("Provincia: "), 0, 1, 'C');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(0, 35, utf8_decode($clinica["provincia"] ? $clinica["provincia"] : ""), 0, 0, 'C');
+        // DTTO
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(-15, 20, utf8_decode("DTTO: "), 0, 1, 'R');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(180, -5, utf8_decode($clinica["departamento"] ? $clinica["departamento"] : ""), 0, 0, 'R');
+
+        $pdf->Cell(0, 5, "", 0, 1, 'C');
+
+        // telefono
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(20, 10, utf8_decode("Telefono: "), 0, 1, 'L');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(20, 5, utf8_decode($clinica["telefonoPaciente"] ? $clinica["telefonoPaciente"] : ""), 0, 0, 'L');
+        // medico
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(158, -10, utf8_decode("Médico: "), 0, 1, 'C');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(0, 25, utf8_decode($clinica["nombreMedico"] ? $clinica["nombreMedico"] : ""), 0, 0, 'C');
+        // motivo
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(-15, 10, utf8_decode("Motivo: "), 0, 1, 'R');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(180, 5, utf8_decode($clinica["motivo"] ? $clinica["motivo"] : ""), 0, 0, 'R');
+
+        $pdf->Cell(0, 5, "", 0, 1, 'C');
 
         $this->response->setHeader('Content-Type', 'application/pdf');
-        $pdf->Output("Clinica Cercado.pdf", "I");
+        $pdf->Output("Enfoque Salud - " . $clinica["nombres"] . " " . $clinica["apellidos"] . ".pdf", "I");
     }
 
 

@@ -17,7 +17,6 @@
                                 <i class="fas fa-search"></i>
                                 Buscar Paciente
                             </a>
-
                         </div>
 
                         <input type="hidden" class="form-control form-control-sm" name="txt_IDHistoria" id="txt_IDPersonal">
@@ -130,7 +129,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-
                             </tbody>
                         </table>
                     </div>

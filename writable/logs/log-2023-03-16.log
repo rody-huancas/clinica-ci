@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ERROR - 2023-03-16 23:05:41 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
 CRITICAL - 2023-03-16 23:05:41 --> Unable to connect to the database.
 Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
@@ -482,3 +483,54 @@ CRITICAL - 2023-03-16 23:57:28 --> Undefined variable $fecha
 #3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 {main}
+=======
+CRITICAL - 2023-03-16 20:39:42 --> Cannot access offset of type string on string
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->generarPDF(' 1')
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-03-16 20:40:04 --> Cannot access offset of type string on string
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->generarPDF(' 1')
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-03-16 20:49:03 --> Attempt to read property "nombres" on array
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(255): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\laragon\\www\\...', 255)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->generarPDF(' 1')
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-03-16 20:49:18 --> Undefined variable $resultado
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(255): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\laragon\\www\\...', 255)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->generarPDF(' 1')
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-03-16 20:49:25 --> Attempt to read property "nombres" on array
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(255): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\laragon\\www\\...', 255)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->generarPDF(' 1')
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-03-16 21:36:21 --> utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'utf8_decode(): ...', 'C:\\laragon\\www\\...', 301)
+#1 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(301): utf8_decode(NULL)
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->generarPDF(' 2')
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#4 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2023-03-16 21:36:40 --> utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'utf8_decode(): ...', 'C:\\laragon\\www\\...', 301)
+#1 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(301): utf8_decode(NULL)
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->generarPDF(' 2')
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#4 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+>>>>>>> 0ca7579b2bfe3c292a32f188d95725102ce4be07

@@ -1,0 +1,484 @@
+ERROR - 2023-03-16 23:05:41 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+CRITICAL - 2023-03-16 23:05:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\laragon\www\ProyectoClinica_ci\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Login.php(59): CodeIgniter\BaseModel->first()
+#5 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Login->validacion_do()
+#6 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-03-16 23:06:18 --> Table 'db_clinica.caja' doesn't exist
+CRITICAL - 2023-03-16 23:06:18 --> Table 'db_clinica.caja' doesn't exist
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->index()
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2023-03-16 23:19:21 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:19:21 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('a')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('a')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:19:23 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:19:23 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('al')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('al')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:19:23 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:19:23 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('alc')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('alc')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:19:23 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:19:23 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('alca')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('alca')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:19:24 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:19:24 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('alc')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('alc')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:19:24 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:19:24 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('al')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('al')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:19:24 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:19:24 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('alva')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('alva')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:19:24 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:19:24 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('alva')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('alva')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:26:39 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:26:39 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('a')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('a')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:26:39 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:26:39 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('aa')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('aa')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:26:40 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:26:40 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('aad')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('aad')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:26:40 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:26:40 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('aa')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('aa')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:26:41 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:26:41 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('a')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('a')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:26:41 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:26:41 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('al')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('al')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:26:41 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:26:41 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('alv')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('alv')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:26:41 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:26:41 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('alva')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('alva')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:06 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:06 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('alv')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('alv')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:07 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:07 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('al')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('al')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:07 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:07 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('a')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('a')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:07 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:07 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('aa')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('aa')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:07 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:07 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('a')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('a')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:07 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:07 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('aw')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('aw')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:07 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:07 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('a')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('a')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:08 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:08 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('e')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('e')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:08 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:08 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('eq')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('eq')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:08 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:08 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('e')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('e')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:49 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:49 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('a')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('a')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:49 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:49 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('as')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('as')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:27:50 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:27:50 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(94): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('asc')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('asc')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-16 23:29:45 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+CRITICAL - 2023-03-16 23:29:45 --> Unknown column 'historiaclinica.nombre' in 'where clause'
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(93): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(48): App\Models\HistoriaClinicaModel->getBusqueda('a')
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('a')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-16 23:57:28 --> Undefined variable $fecha
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\laragon\\www\\...', 72)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->registrarDatos()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

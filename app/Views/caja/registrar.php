@@ -20,7 +20,7 @@
 
                         </div>
 
-                        <input type="hidden" class="form-control form-control-sm" name="txt_IDPersonal" id="txt_IDPersonal">
+                        <input type="hidden" class="form-control form-control-sm" name="txt_IDHistoria" id="txt_IDPersonal">
 
                         <div class="col-lg-4">
                             <div class="form-group">
@@ -145,21 +145,22 @@
     function keyBusqueda(val) {
         if (val != "") {
             $.ajax({
-                url: "<?php echo base_url() ?>/historiaclinica/keyBusqueda/" + val,
+                url: "<?php echo base_url() ?>/caja/keyBusqueda/" + val,
                 method: "post",
                 dataType: "json",
                 success: function(response) {
                     $("#tblBusqueda>tbody").empty();
                     let cont = 0;
-                    if (response.personal) {
-                        $.each(response.personal, function(idx, val) {
+                    if (response.historiaclinica) {
+                        $.each(response.historiaclinica, function(idx, val) {
                             cont++;
                             $("#tblBusqueda>tbody").append("<tr>\
                                                         <td>" + cont + "</td>\
-                                                        <td>" + val.medico + "</td>\
+                                                        <td>" + val.paciente + "</td>\
                                                         <td>" + val.nombre + "</td>\
+                                                        <td>" + val.motivo + "</td>\
                                                         <td class='text-center'>\
-                                                            <button class='btn btn-info btn-xs' onclick='mostrarMedicoID(" + val.idPersonal + ")'>\
+                                                            <button class='btn btn-info btn-xs' onclick='mostrarPacienteID(" + val.idhistoria + ")'>\
                                                             <i class='fas fa-arrow-circle-right'></i>\
                                                             </button>\
                                                         </td>\
@@ -176,17 +177,19 @@
     }
 
 
-    function mostrarMedicoID(idPersonal) {
+    function mostrarPacienteID(idhistoria) {
         $.ajax({
-            url: "<?php echo base_url() ?>/historiaclinica/mostrarMedicoID/" + idPersonal,
+            url: "<?php echo base_url() ?>/caja/mostrarPacienteID/" + idhistoria,
             method: "post",
             dataType: "json",
             success: function(response) {
                 $("#modalBusqueda").modal("hide");
                 //limpiarForm();
-                $('[name="txt_IDPersonal"]').val(response.personal.idPersonal);
-                $('[name="nombreMedico"]').val(response.personal.nombre).prop("disabled", true);
-                $('[name="especialidad"]').val(response.personal.especialidad).prop("disabled", true);
+                $('[name="txt_IDHistoria"]').val(response.historiaclinica.idhistoria);
+                $('[name="nombrePaciente"]').val(response.historiaclinica.nombres).prop("disabled", true);
+                $('[name="medico"]').val(response.historiaclinica.nombreMedico).prop("disabled", true);
+                $('[name="descripcion"]').val(response.historiaclinica.motivo).prop("disabled", true);
+
 
             },
             error: function(jqXHR, textStatus, errorThrown) {}

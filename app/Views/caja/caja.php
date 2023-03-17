@@ -48,7 +48,7 @@
                                             <?php echo $cont ?></php>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo "" ?>
+                                            <?php echo $row["idhistoria"]; ?>
                                         </td>
                                         <td class="text-center">
                                             <?php echo "" ?>

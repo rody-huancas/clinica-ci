@@ -43,8 +43,61 @@ class Caja extends BaseController
         return view("index", $data);
     }
 
+    public function keyBusqueda($value)
+    {
+        $query = $this->historia->getBusqueda($value);
+        return json_encode(array("historiaclinica" => $query));
+    }
+
+    public function mostrarPacienteID($idhistoria)
+    {
+        $query = $this->historia->getResultadosID($idhistoria);
+        return json_encode(array("historiaclinica" => $query));
+    }
+
     // Registrar datos
     public function registrarDatos()
     {
+        if ($this->request->getMethod() == "post") {
+           
+            $txt_IDHistoria = $this->request->getPost("txt_IDHistoria");
+            $referido = $this->request->getPost("referido");
+            $gestion = $this->request->getPost("gestion");
+            $comentario = $this->request->getPost("comentario");
+            $ingreso =  $this->request->getPost("ingreso");
+            $egreso_one =  $this->request->getPost("egreso_one");
+            $egreso_two =  $this->request->getPost("egreso_two");
+            $total = $ingreso - ($egreso_one+$egreso_two);
+            // Calcular la edad a partir de la fecha de nacimiento
+            $fechaNac = new DateTime();
+            $hoy = new DateTime();
+            $edad = $fechaNac->diff($hoy)->y;
+
+            // Generar código único
+
+            $data = [
+                'idhistoria'=> $txt_IDHistoria,
+                'referido'=> $referido,
+                'comentario'=> $comentario,
+                'gestion'=> $gestion,
+                'ingreso'=>  $ingreso,
+                'egreso_one'=>  $egreso_one,
+                'egreso_two'=> $egreso_two,
+                'total'=>  $total,
+                'fecha_creacion'=> date('d/m/y'),
+                'hora_creacion'=> date('H:i:s')
+            ];
+
+            // Guardar registro en la base de datos
+            $this->caja->save($data);
+            $this->session->setFlashdata("mensaje", "1");
+            $this->session->setFlashdata("texto", "Datos registrados correctamente");
+
+            return redirect()->to(base_url() . "/caja");
+        } else {
+            $data["contenido"] = "historiaclinica/registrar";
+            return view("index", $data);
+        }
+
     }
 }

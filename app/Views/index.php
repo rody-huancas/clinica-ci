@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="shortcut icon" href="<?php echo base_url(); ?>/public/dist/img/icons8-clínica-48.png">
 
-  <title>Clínica Cercado</title>
+  <title>Enfoque Salud</title>
 
   <!-- vendor css -->
   <link href="<?php echo base_url(); ?>/public/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -40,7 +40,7 @@
   <!-- INICIO MENÚ LATERAL -->
   <!-- Logo -->
   <div class="br-logo m-auto">
-    <a href="<?php echo base_url(); ?>/inicio"><span>[</span>Clínica Cercado<span>]</span></a>
+    <a href="<?php echo base_url(); ?>/inicio"><span>[</span>Enfoque Salud<span>]</span></a>
   </div>
   <!-- fin logo -->
 

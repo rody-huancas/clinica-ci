@@ -214,21 +214,65 @@ class Historiaclinica extends BaseController
     // Generar PDF
     function generarPDF($id)
     {
-        $orden = $this->historia->findAll($id);
+        $clinica = $this->historia->getResultado($id);
 
         $pdf = new \FPDF('P', 'mm', 'letter');
         $pdf->AddPage();
         $pdf->SetMargins(10, 10, 10);
-        $pdf->SetTitle('Ordenes');
-        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetTitle(utf8_decode('Historia Clínica'));
+        $pdf->SetFont('Arial', 'B', 12);
 
         // Título
-        $pdf->Cell(195, 5, "Reporte de Usuarios", 0, 1, 'C');
-        $pdf->SetFont('Arial', 'B', 9);
+        $pdf->Cell(195, 5, utf8_decode('Historia Clínica'), 0, 1, 'C');
+        $pdf->SetFont('Arial', 'B', 11);
 
-        // $this->response->setHeader('Content-Type', 'application/pdf');
-        $pdf->Output("Orden.pdf", "I");
+        // header
+        $pdf->Image(base_url() . '/public/dist/images/clinica-cercado.jpg', 45, 20, 45, 40, 'JPG');
+        // N° de historia
+        $pdf->Cell(130, 40, utf8_decode("N° de historia: "), 0, 1, 'R');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(160, -40, utf8_decode($clinica['codigohistoria']), 0, 0, 'R');
+        // Fecha de creación
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(-44, -25, utf8_decode("Fecha: "), 0, 1, 'R');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(160, 25, utf8_decode($clinica['fechaCreacion']), 0, 0, 'R');
+        // Hora de creación
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(-46.5, 40, utf8_decode("Hora: "), 0, 1, 'R');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(160, -40, utf8_decode($clinica['horaCreacion']), 0, 0, 'R');
+
+        // Datos del Paciente
+        $pdf->Line(10, 65, 200, 65);
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(-100, 10, utf8_decode("DATOS DEL PACIENTE "), 0, 1, 'R');
+        // nombre
+        $pdf->Cell(33, 15, utf8_decode("Nombre: "), 0, 1, 'R');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(42, -15, utf8_decode($clinica['nombres']), 0, 0, 'R');
+        // apellidos
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(65, -15, utf8_decode("Apellidos: "), 0, 1, 'R');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(123, 15, utf8_decode($clinica['apellidos']), 0, 0, 'R');
+        // dni
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(27, 15, utf8_decode("DNI: "), 0, 1, 'R');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(168, -15, utf8_decode($clinica['dni']), 0, 0, 'R');
+        // dni
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Cell(-112, 5, utf8_decode("Fecha de Nacimiento: "), 0, 1, 'R');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Cell(78, -5, utf8_decode($clinica['fechaNac']), 0, 0, 'R');
+
+
+
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        $pdf->Output("Clinica Cercado.pdf", "I");
     }
+
 
 
 

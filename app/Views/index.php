@@ -110,6 +110,22 @@
         </li>
       </ul>
       <!-- br-menu-link -->
+      <!-- br-menu-link -->
+      <a href="#" class="br-menu-link">
+        <div class="br-menu-item">
+          <i class="fa-sharp fa-solid fa-wallet"></i>
+          <span class="menu-item-label">Venta</span>
+          <i class="menu-item-arrow fa fa-angle-down"></i>
+        </div>
+        <!-- menu-item -->
+      </a>
+
+      <ul class="br-menu-sub nav flex-column">
+        <li class="nav-item">
+          <a href="<?php echo base_url(); ?>/caja" class="nav-link">Caja</a>
+        </li>
+      </ul>
+      <!-- br-menu-link -->
     </div>
     <br />
   </div>

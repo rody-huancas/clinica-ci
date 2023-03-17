@@ -41,12 +41,6 @@
                                 <input class="form-control" type="text" name="direccion" id="direccion" placeholder="Ingrese la dirección">
                             </div>
                         </div><!-- col-8 -->
-                        <div class="col-lg-8">
-                            <div class="form-group">
-                                <label class="form-control-label">Ciudad: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" name="ciudad" placeholder="Ingrese su localidad">
-                            </div>
-                        </div><!-- col-8 -->
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Genero: <span class="tx-danger">*</span></label>

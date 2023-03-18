@@ -28,7 +28,7 @@
                                     <th class="text-center wd-20p">Médico</th>
                                     <th class="text-center wd-20p">Descripción</th>
                                     <th class="text-center wd-20p">Gestión</th>
-                                    <th class="text-center wd-20p">Referio</th>
+                                    <th class="text-center wd-20p">Referido</th>
                                     <th class="text-center wd-20p">Ingreso</th>
                                     <th class="text-center wd-20p">Egreso 1</th>
                                     <th class="text-center wd-20p">Egreso 2</th>
@@ -54,7 +54,7 @@
                                             <?php echo $row["nombreMedico"]; ?>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo $row["motivo"]; ?>
+                                            <?php echo $row["comentario"]; ?>
                                         </td>
                                         <td class="text-center">
                                             <?php echo $row["gestion"]; ?>

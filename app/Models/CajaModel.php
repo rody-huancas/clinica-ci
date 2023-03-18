@@ -46,7 +46,9 @@ class CajaModel extends Model
             caja.ingreso,
             caja.egreso_one,
             caja.egreso_two,
+            caja.comentario,
             caja.total,
+            caja.idhistoria,
             historiaclinica.codigohistoria,
             historiaclinica.telefonoPaciente,
             historiaclinica.edad,
@@ -79,11 +81,13 @@ class CajaModel extends Model
     {
         $this->select("
             caja.idCaja,
+            caja.idhistoria,
             caja.gestion,
             caja.referido,
             caja.ingreso,
             caja.egreso_one,
             caja.egreso_two,
+            caja.comentario,
             caja.total,
             historiaclinica.codigohistoria,
             historiaclinica.telefonoPaciente,

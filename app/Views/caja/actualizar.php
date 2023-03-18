@@ -6,7 +6,7 @@
     <div class="br-pagebody">
         <div class="br-section-wrapper mb-5">
             <div class="form-layout form-layout-1">
-                <form action="<?php echo base_url() ?>/caja/actualizarDatos/" method="post" enctype="multipart/form-data">
+                <form action="<?php echo base_url() ?>/caja/actualizarDatos/<?php echo $caja["idCaja"] ?>" method="post" enctype="multipart/form-data">
                     <div class="row mg-b-25">
 
                         <!-- datos paciente -->
@@ -19,26 +19,26 @@
                             </a>
                         </div>
 
-                        <input type="hidden" class="form-control form-control-sm" name="txt_IDHistoria" id="txt_IDPersonal">
+                        <input type="hidden" class="form-control form-control-sm" name="txt_IDHistoria" id="txt_IDPersonal" value="<?= $caja["idhistoria"] ?>" >
 
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Nombre: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" name="nombrePaciente" id="nombrePaciente" placeholder="Nombre del paciente" disabled>
+                                <input class="form-control" type="text" name="nombrePaciente" id="nombrePaciente" placeholder="Nombre del paciente" disabled value="<?= $caja["nombrePaciente"] ?>">
                             </div>
                         </div><!-- col-8 -->
 
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Médico: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="medico" name="medico" placeholder="Nombre de médico" disabled>
+                                <input class="form-control" type="text" id="medico" name="medico" placeholder="Nombre de médico" disabled value="<?= $caja["nombreMedico"] ?>">
                             </div>
                         </div>
 
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Descripcion: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="descripcion" name="descripcion" placeholder="Descripción" disabled>
+                                <input class="form-control" type="text" id="descripcion" name="descripcion" placeholder="Descripción" disabled value="<?= $caja["motivo"] ?>">
                             </div>
                         </div>
 
@@ -46,21 +46,21 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-control-label">Referido: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="referido" name="referido" placeholder="Referido">
+                                <input class="form-control" type="text" id="referido" name="referido" placeholder="Referido" value="<?= $caja["referido"] ?>">
                             </div>
                         </div>
 
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-control-label">Gestión: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="gestion" name="gestion" placeholder="Gestión">
+                                <input class="form-control" type="text" id="gestion" name="gestion" placeholder="Gestión" value="<?= $caja["gestion"] ?>">
                             </div>
                         </div>
 
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label class="form-control-label">Comentario: <span class="tx-danger">*</span></label>
-                                <textarea class="form-control" name="comentario" id="comentario" placeholder="Comentario" style="min-height: 80px;"></textarea>
+                                <textarea class="form-control" name="comentario" id="comentario" placeholder="Comentario" style="min-height: 80px;"><?= $caja["comentario"] ?></textarea>
                             </div>
                         </div>
 
@@ -68,19 +68,19 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Ingreso: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="ingreso" name="ingreso" placeholder="Ingreso">
+                                <input class="form-control" type="text" id="ingreso" name="ingreso" placeholder="Ingreso" value="<?= $caja["ingreso"] ?>">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Egreso 1: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="egreso_one" name="egreso_one" placeholder="Egreso 1">
+                                <input class="form-control" type="text" id="egreso_one" name="egreso_one" placeholder="Egreso 1" value="<?= $caja["egreso_one"] ?>">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Egreso 2: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="egreso_two" name="egreso_two" placeholder="Egreso 2">
+                                <input class="form-control" type="text" id="egreso_two" name="egreso_two" placeholder="Egreso 2" value="<?= $caja["egreso_two"] ?>">
                             </div>
                         </div>
 

@@ -33,6 +33,9 @@
 
   <script src="https://kit.fontawesome.com/0a36c73c11.js" crossorigin="anonymous"></script>
 
+  <!-- Repoorte -->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/public/lib/dataTables-export/css/buttons.dataTables.min.css" />
+
 
 </head>
 
@@ -204,6 +207,36 @@
   <script src="<?php echo base_url(); ?>/public/dist/js/main/dashboard.js"></script>
   <script src="<?php echo base_url(); ?>/public/dist/js/main/app.js"></script>
 
+  <!-- Reportes -->
+  <script src="<?php echo base_url(); ?>/public/lib/dataTables-export/js/buttons.flash.min.js"></script>
+  <script src="<?php echo base_url(); ?>/public/lib/dataTables-export/js/buttons.html5.min.js"></script>
+  <script src="<?php echo base_url(); ?>/public/lib/dataTables-export/js/buttons.print.min.js"></script>
+  <script src="<?php echo base_url(); ?>/public/lib/dataTables-export/js/dataTables.buttons.min.js"></script>
+  <script src="<?php echo base_url(); ?>/public/lib/dataTables-export/js/jszip.min.js"></script>
+  <script src="<?php echo base_url(); ?>/public/lib/dataTables-export/js/pdfmake.min.js"></script>
+  <script src="<?php echo base_url(); ?>/public/lib/dataTables-export/js/vfs_fonts.js"></script>
+
+  <script>
+    $('#datatable1').DataTable({
+      dom: 'Bfrtip',
+      buttons: [{
+          extend: 'excelHtml5',
+          title: "Listado de Ventas",
+          exportOptions: {
+            columns: [2, 5, 6, 7, 8, 9, 10]
+          }
+        },
+        {
+          extend: 'pdfHtml5',
+          title: "Listado de Ventas",
+          exportOptions: {
+            columns: [5, 6, 7, 8, 9, 10]
+          }
+
+        }
+      ]
+    });
+  </script>
 </body>
 
 </html>

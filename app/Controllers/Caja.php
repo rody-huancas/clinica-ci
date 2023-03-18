@@ -32,7 +32,7 @@ class Caja extends BaseController
     {
         $data['titulo'] = "Reporte de Caja";
         $data['contenido'] = 'caja/caja';
-        $data["caja"] = $this->caja->findAll();
+        $data["caja"] = $this->caja->getCaja();
         return view('index', $data);
     }
 
@@ -100,4 +100,14 @@ class Caja extends BaseController
         }
 
     }
+
+    public function verRegistro($id)
+    {
+        $caja = $this->caja->getResultado($id);
+        $data["historia"] = $caja;
+        $data["titulo"] = "Actualizar Historia Clínica";
+        $data["contenido"] = "caja/actualizar";
+        return view("index", $data);
+    }
+
 }

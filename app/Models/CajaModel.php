@@ -36,4 +36,82 @@ class CajaModel extends Model
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation     = false;
+
+    public function getCaja()
+    {
+        $this->select("
+            caja.idCaja,
+            caja.gestion,
+            caja.referido,
+            caja.ingreso,
+            caja.egreso_one,
+            caja.egreso_two,
+            caja.total,
+            historiaclinica.codigohistoria,
+            historiaclinica.telefonoPaciente,
+            historiaclinica.edad,
+            historiaclinica.fechaNac,
+            historiaclinica.distrito,
+            historiaclinica.departamento,
+            historiaclinica.direccion,
+            historiaclinica.fechaCreacion,
+            historiaclinica.provincia,
+            historiaclinica.horaCreacion,
+            historiaclinica.parentezco,
+            historiaclinica.telefono,
+            historiaclinica.dni,
+            historiaclinica.dnifamiliar,
+            historiaclinica.idPersonal,
+            historiaclinica.motivo,
+            historiaclinica.origen,
+            concat_ws(' ', historiaclinica.nombres,historiaclinica.apellidos) as nombrePaciente,
+            concat_ws(' ', personal.nombre,personal.apellidos) as nombreMedico,
+            tipoespecialidad.nombre as nombreEspecialidad
+        ");
+        $this->join('historiaclinica', 'historiaclinica.idhistoria = caja.idhistoria');
+        $this->join('personal', 'historiaclinica.idPersonal = personal.idPersonal');
+        $this->join('tipoespecialidad', 'personal.idTipoEspecialidad = tipoespecialidad.idTipoEspecialidad');
+        $query = $this->findAll();
+        return $query;
+    }
+
+    public function getResultado($id)
+    {
+        $this->select("
+            caja.idCaja,
+            caja.gestion,
+            caja.referido,
+            caja.ingreso,
+            caja.egreso_one,
+            caja.egreso_two,
+            caja.total,
+            historiaclinica.codigohistoria,
+            historiaclinica.telefonoPaciente,
+            historiaclinica.edad,
+            historiaclinica.fechaNac,
+            historiaclinica.distrito,
+            historiaclinica.departamento,
+            historiaclinica.direccion,
+            historiaclinica.fechaCreacion,
+            historiaclinica.provincia,
+            historiaclinica.horaCreacion,
+            historiaclinica.parentezco,
+            historiaclinica.telefono,
+            historiaclinica.dni,
+            historiaclinica.dnifamiliar,
+            historiaclinica.idPersonal,
+            historiaclinica.motivo,
+            historiaclinica.origen,
+            concat_ws(' ', historiaclinica.nombres,historiaclinica.apellidos) as nombrePaciente,
+            concat_ws(' ', personal.nombre,personal.apellidos) as nombreMedico,
+            tipoespecialidad.nombre as nombreEspecialidad
+        ");
+        $this->join('historiaclinica', 'historiaclinica.idhistoria = caja.idhistoria');
+        $this->join('personal', 'historiaclinica.idPersonal = personal.idPersonal');
+        $this->join('tipoespecialidad', 'personal.idTipoEspecialidad = tipoespecialidad.idTipoEspecialidad');
+        $this->where('caja.idCaja', $id);
+
+        $query = $this->first();
+        return $query;
+    }
 }

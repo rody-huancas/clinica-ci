@@ -40,7 +40,7 @@
                                 foreach ($caja as $row) : $cont++; ?>
                                     <tr>
                                         <td class="d-flex">
-                                            <a href="#?>" class="btn btn-primary btn-sm ml-1"><i class="icon ion-edit"></i></a>
+                                            <a href="<?php echo base_url() ?>/caja/verRegistro/<?php echo $row["idCaja"]; ?>" class="btn btn-primary btn-sm ml-1"><i class="icon ion-edit"></i></a>
                                             <a href=#" class="btn btn-info btn-sm ml-1"><i class="icon ion-eye"></i></a>
                                             <a href="#" class="btn btn-success btn-sm ml-1" target="_blank"><i class="fa-sharp fa-regular fa-file-pdf"></i></a>
                                         </td>
@@ -48,13 +48,13 @@
                                             <?php echo $cont ?></php>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo $row["idhistoria"]; ?>
+                                            <?php  echo $row["nombrePaciente"]; ?>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo "" ?>
+                                            <?php echo $row["nombreMedico"]; ?>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo "" ?>
+                                            <?php echo $row["motivo"]; ?>
                                         </td>
                                         <td class="text-center">
                                             <?php echo $row["gestion"]; ?>

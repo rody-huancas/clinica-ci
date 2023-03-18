@@ -48,7 +48,7 @@
                                             <?php echo $cont ?></php>
                                         </td>
                                         <td class="text-center">
-                                            <?php  echo $row["nombrePaciente"]; ?>
+                                            <?php echo $row["nombrePaciente"]; ?>
                                         </td>
                                         <td class="text-center">
                                             <?php echo $row["nombreMedico"]; ?>
@@ -66,13 +66,13 @@
                                             <?php echo $row["ingreso"]; ?>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo $row["egreso_one"]; ?>
+                                            <?php echo "S/. " . $row["egreso_one"]; ?>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo $row["egreso_two"]; ?>
+                                            <?php echo "S/. " . $row["egreso_two"]; ?>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo $row["total"]; ?>
+                                            <?php echo "S/. " . $row["total"]; ?>
                                         </td>
                                     </tr>
                                 <?php endforeach ?>

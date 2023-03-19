@@ -135,12 +135,6 @@ class Caja extends BaseController
             $egreso_one =  $this->request->getPost("egreso_one");
             $egreso_two =  $this->request->getPost("egreso_two");
             $total = $ingreso - ($egreso_one + $egreso_two);
-            // Calcular la edad a partir de la fecha de nacimiento
-            $fechaNac = new DateTime();
-            $hoy = new DateTime();
-            $edad = $fechaNac->diff($hoy)->y;
-
-            // Generar código único
 
             $data = [
                 'idhistoria' => $txt_IDHistoria,
@@ -151,8 +145,6 @@ class Caja extends BaseController
                 'egreso_one' =>  $egreso_one,
                 'egreso_two' => $egreso_two,
                 'total' =>  $total,
-                'fecha_creacion' => date('d/m/y'),
-                'hora_creacion' => date('H:i:s')
             ];
 
             // Guardar registro en la base de datos

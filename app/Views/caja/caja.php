@@ -39,12 +39,12 @@
             <div class="form-layout form-layout-1">
                 <div class="row mg-b-25">
                     <div class="m-auto table-responsive overflow-x-scroll p-3">
-                        <table id="datatable1" class="table table-hover table-bordered">
+                        <table id="datatable2" class="table table-hover table-bordered">
                             <thead>
                                 <tr>
                                     <th class="text-center wd-5p">Opciones</th>
                                     <th class="text-center wd-3p">N°</th>
-                                    <th class="text-center wd-20p">Nombre Completo</th>
+                                    <th class="text-center wd-40p">Nombre Completo</th>
                                     <th class="text-center wd-20p">Médico</th>
                                     <th class="text-center wd-20p">Descripción</th>
                                     <th class="text-center wd-20p">Gestión</th>

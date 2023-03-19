@@ -6,6 +6,13 @@
   --color-border: #e9ecef;
 }
 
+/* botones de reporte */
+.excelButton {
+  background-color: green;
+}
+
+/*********************/
+
 .historia {
   color: var(--color-title);
   font-family: "Poppins", sans-serif;

@@ -30,9 +30,23 @@ class Caja extends BaseController
 
     public function index()
     {
+        $fechainicio  = $this->request->getPost("fechainicio");
+        $fechafin  = $this->request->getPost("fechafin");
+
+        if ($this->request->getPost("buscar")) {
+            $cajaRes = $this->caja->getVentasbyDate($fechainicio, $fechafin);
+        } else {
+            $cajaRes = $this->caja->getCaja();
+        }
+
+        // var_dump($cajaRes);
+        // return;
+
         $data['titulo'] = "Reporte de Caja";
         $data['contenido'] = 'caja/caja';
-        $data["caja"] = $this->caja->getCaja();
+        $data["fechainicio"] = $fechainicio;
+        $data["fechafin"] = $fechafin;
+        $data["caja"] = $cajaRes;
         return view('index', $data);
     }
 
@@ -59,7 +73,7 @@ class Caja extends BaseController
     public function registrarDatos()
     {
         if ($this->request->getMethod() == "post") {
-           
+
             $txt_IDHistoria = $this->request->getPost("txt_IDHistoria");
             $referido = $this->request->getPost("referido");
             $gestion = $this->request->getPost("gestion");
@@ -67,7 +81,7 @@ class Caja extends BaseController
             $ingreso =  $this->request->getPost("ingreso");
             $egreso_one =  $this->request->getPost("egreso_one");
             $egreso_two =  $this->request->getPost("egreso_two");
-            $total = $ingreso - ($egreso_one+$egreso_two);
+            $total = $ingreso - ($egreso_one + $egreso_two);
             // Calcular la edad a partir de la fecha de nacimiento
             $fechaNac = new DateTime();
             $hoy = new DateTime();
@@ -76,16 +90,16 @@ class Caja extends BaseController
             // Generar código único
 
             $data = [
-                'idhistoria'=> $txt_IDHistoria,
-                'referido'=> $referido,
-                'comentario'=> $comentario,
-                'gestion'=> $gestion,
-                'ingreso'=>  $ingreso,
-                'egreso_one'=>  $egreso_one,
-                'egreso_two'=> $egreso_two,
-                'total'=>  $total,
-                'fecha_creacion'=> date('d/m/y'),
-                'hora_creacion'=> date('H:i:s')
+                'idhistoria' => $txt_IDHistoria,
+                'referido' => $referido,
+                'comentario' => $comentario,
+                'gestion' => $gestion,
+                'ingreso' =>  $ingreso,
+                'egreso_one' =>  $egreso_one,
+                'egreso_two' => $egreso_two,
+                'total' =>  $total,
+                'fecha_creacion' => date('Y-m-d'),
+                'hora_creacion' => date('H:i:s')
             ];
 
             // Guardar registro en la base de datos
@@ -98,7 +112,6 @@ class Caja extends BaseController
             $data["contenido"] = "historiaclinica/registrar";
             return view("index", $data);
         }
-
     }
 
     public function verRegistro($id)
@@ -109,5 +122,4 @@ class Caja extends BaseController
         $data["contenido"] = "caja/actualizar";
         return view("index", $data);
     }
-
 }

@@ -9,11 +9,31 @@
     </h4>
 </div>
 
-<div class="br-pagebody pd-x-30">
+<div class="br-pagebody mb-5">
     <div class="br-pagebody">
         <div class="br-section-wrapper">
+
+            <div class="d-flex justify-content-center mb-5">
+                <form action="<?php echo current_url(); ?>" method="POST" class="form-horizontal">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                        <label for="" class="col-md-1 control-label">Desde:</label>
+                        <div class="col-md-3">
+                            <input type="date" class="form-control" name="fechainicio" value="<?php echo !empty($fechainicio) ? $fechainicio : ''; ?>">
+                        </div>
+                        <label for="" class="col-md-1 control-label">Hasta:</label>
+                        <div class="col-md-3">
+                            <input type="date" class="form-control" name="fechafin" value="<?php echo !empty($fechafin) ? $fechafin : ''; ?>">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="submit" name="buscar" value="Buscar" class="btn btn-primary">
+                            <a href="<?php echo base_url(); ?>/caja" class="btn btn-danger">Restablecer</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
             <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10 mb-5 d-flex justify-content-between">
-                Historias Clínicas Registradas
+                Ventas Registradas
                 <a href="<?php echo base_url() ?>/caja/registrar"><button class="btn btn-primary" type="button" style="cursor: pointer;"><i class="icon ion-plus"></i> Nueva Venta</button></a>
             </h6>
             <div class="form-layout form-layout-1">
@@ -28,7 +48,8 @@
                                     <th class="text-center wd-20p">Médico</th>
                                     <th class="text-center wd-20p">Descripción</th>
                                     <th class="text-center wd-20p">Gestión</th>
-                                    <th class="text-center wd-20p">Referio</th>
+                                    <th class="text-center wd-20p">Referido</th>
+                                    <th class="text-center wd-20p">Fecha</th>
                                     <th class="text-center wd-20p">Ingreso</th>
                                     <th class="text-center wd-20p">Egreso 1</th>
                                     <th class="text-center wd-20p">Egreso 2</th>
@@ -42,7 +63,6 @@
                                         <td class="d-flex">
                                             <a href="<?php echo base_url() ?>/caja/verRegistro/<?php echo $row["idCaja"]; ?>" class="btn btn-primary btn-sm ml-1"><i class="icon ion-edit"></i></a>
                                             <a href=#" class="btn btn-info btn-sm ml-1"><i class="icon ion-eye"></i></a>
-                                            <a href="#" class="btn btn-success btn-sm ml-1" target="_blank"><i class="fa-sharp fa-regular fa-file-pdf"></i></a>
                                         </td>
                                         <td class="text-center">
                                             <?php echo $cont ?></php>
@@ -63,16 +83,19 @@
                                             <?php echo $row["referido"]; ?>
                                         </td>
                                         <td class="text-center">
+                                            <?php echo $row["fecha_creacion"]; ?>
+                                        </td>
+                                        <td class="text-center">
                                             <?php echo $row["ingreso"]; ?>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo "S/. " . $row["egreso_one"]; ?>
+                                            <?php echo $row["egreso_one"]; ?>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo "S/. " . $row["egreso_two"]; ?>
+                                            <?php echo $row["egreso_two"]; ?>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo "S/. " . $row["total"]; ?>
+                                            <?php echo $row["total"]; ?>
                                         </td>
                                     </tr>
                                 <?php endforeach ?>

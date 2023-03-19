@@ -5,7 +5,7 @@
 <div class="br-pagebody pd-x-30">
     <div class="br-pagebody">
         <div class="br-section-wrapper mb-5">
-        <?php error_reporting(0); ?>
+            <?php error_reporting(0); ?>
             <div class="form-layout form-layout-1">
                 <form action="<?php echo base_url() ?>/caja/registrarDatos" method="post" enctype="multipart/form-data">
                     <div class="row mg-b-25">
@@ -20,7 +20,7 @@
                             </a>
                         </div>
 
-                        <input type="hidden" class="form-control form-control-sm" name="txt_IDHistoria" id="txt_IDPersonal" >
+                        <input type="hidden" class="form-control form-control-sm" name="txt_IDHistoria" id="txt_IDPersonal">
 
                         <div class="col-lg-4">
                             <div class="form-group">
@@ -60,7 +60,7 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-control-label">Gestión: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="gestion" name="gestion" placeholder="Gestión"  value="<?= set_value('gestion') ?>">
+                                <input class="form-control" type="text" id="gestion" name="gestion" placeholder="Gestión" value="<?= set_value('gestion') ?>">
                                 <p id="errNom" style="color:red">
                                     <?php echo (isset($validation)) ? $validation->getError('gestion') : ""; ?>
                                 </p>
@@ -70,7 +70,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label class="form-control-label">Comentario: <span class="tx-danger">*</span></label>
-                                <textarea class="form-control" name="comentario" id="comentario" placeholder="Comentario" style="min-height: 80px;"></textarea>
+                                <textarea class="form-control" name="comentario" id="comentario" placeholder="Comentario" style="min-height: 80px;"><?= set_value('comentario') ?></textarea>
                                 <p id="errNom" style="color:red">
                                     <?php echo (isset($validation)) ? $validation->getError('comentario') : ""; ?>
                                 </p>
@@ -81,7 +81,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Ingreso: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="ingreso" name="ingreso" placeholder="Ingreso"  value="<?= set_value('ingreso') ?>">
+                                <input class="form-control" type="text" id="ingreso" name="ingreso" placeholder="Ingreso" value="<?= set_value('ingreso') ?>">
                                 <p id="errNom" style="color:red">
                                     <?php echo (isset($validation)) ? $validation->getError('ingreso') : ""; ?>
                                 </p>
@@ -90,7 +90,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Egreso 1: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="egreso_one" name="egreso_one" placeholder="Egreso 1"  value="<?= set_value('egreso_one') ?>">
+                                <input class="form-control" type="text" id="egreso_one" name="egreso_one" placeholder="Egreso 1" value="<?= set_value('egreso_one') ?>">
                                 <p id="errNom" style="color:red">
                                     <?php echo (isset($validation)) ? $validation->getError('egreso_one') : ""; ?>
                                 </p>
@@ -99,7 +99,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Egreso 2: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="egreso_two" name="egreso_two" placeholder="Egreso 2"  value="<?= set_value('egreso_two') ?>">
+                                <input class="form-control" type="text" id="egreso_two" name="egreso_two" placeholder="Egreso 2" value="<?= set_value('egreso_two') ?>">
                                 <p id="errNom" style="color:red">
                                     <?php echo (isset($validation)) ? $validation->getError('egreso_two') : ""; ?>
                                 </p>

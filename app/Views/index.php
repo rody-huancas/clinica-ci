@@ -217,22 +217,69 @@
   <script src="<?php echo base_url(); ?>/public/lib/dataTables-export/js/vfs_fonts.js"></script>
 
   <script>
-    $('#datatable1').DataTable({
+    $('#datatable2').DataTable({
       dom: 'Bfrtip',
       buttons: [{
           extend: 'excelHtml5',
           title: "REPORTE DE CAJA - ENFOQUE SALUD",
           exportOptions: {
-            columns: [6, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+            columns: [1, 6, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+          },
+          className: 'btn',
+          text: '<i class="far fa-file-excel"></i> Exportar a Excel',
+          action: function(e, dt, button, config) {
+            // Obtener los datos de la tabla
+            var data = dt.data().toArray();
+
+            // Calcular la suma de la última columna
+            var sum = data.reduce(function(acc, row) {
+              return acc + parseFloat(row[row.length - 1]);
+            }, 0);
+
+            // Agregar una nueva fila con el valor de la suma al final de los datos
+            var sumRow = ['Total', '', '', '', '', '', '', '', '', '', 'Total', sum];
+            data.push(sumRow);
+
+            // Actualizar los datos de la tabla
+            dt.clear().rows.add(data).draw();
+
+            // Exportar a Excel
+            $.fn.dataTable.ext.buttons.excelHtml5.action.call(this, e, dt, button, config);
+
+            // Restaurar los datos de la tabla
+            dt.clear().rows.add(data.slice(0, -1)).draw();
           }
         },
         {
           extend: 'pdfHtml5',
           title: "REPORTE DE CAJA - ENFOQUE SALUD",
           exportOptions: {
-            columns: [6, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-          }
+            columns: [1, 6, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+          },
+          className: 'btn',
+          text: '<i class="far fa-file-pdf"></i> Exportar a PDF',
+          action: function(e, dt, button, config) {
+            // Obtener los datos de la tabla
+            var data = dt.data().toArray();
 
+            // Calcular la suma de la última columna
+            var sum = data.reduce(function(acc, row) {
+              return acc + parseFloat(row[row.length - 1]);
+            }, 0);
+
+            // Agregar una nueva fila con el valor de la suma al final de los datos
+            var sumRow = ['Total', '', '', '', '', '', '', '', '', '', 'Total', sum];
+            data.push(sumRow);
+
+            // Actualizar los datos de la tabla
+            dt.clear().rows.add(data).draw();
+
+            // Exportar a PDF
+            $.fn.dataTable.ext.buttons.pdfHtml5.action.call(this, e, dt, button, config);
+
+            // Restaurar los datos de la tabla
+            dt.clear().rows.add(data.slice(0, -1)).draw();
+          }
         }
       ]
     });

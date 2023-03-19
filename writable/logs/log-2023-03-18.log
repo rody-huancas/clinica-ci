@@ -495,6 +495,113 @@ CRITICAL - 2023-03-18 16:32:28 --> Undefined variable $row
 #11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
 #13 {main}
+<<<<<<< HEAD
+CRITICAL - 2023-03-18 16:40:38 --> Undefined variable $caja
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\caja\actualizar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\laragon\\www\\...', 9)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('caja/actualizar', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(181): view('caja/actualizar')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(110): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->verRegistro('3')
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-18 16:44:41 --> Undefined array key "comentario"
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\caja\actualizar.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 63)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('caja/actualizar', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(181): view('caja/actualizar')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(110): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->verRegistro('3')
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-03-18 16:48:30 --> Cannot add or update a child row: a foreign key constraint fails (`db_clinica`.`caja`, CONSTRAINT `caja_ibfk_1` FOREIGN KEY (`idhistoria`) REFERENCES `historiaclinica` (`idhistoria`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+CRITICAL - 2023-03-18 16:48:30 --> Cannot add or update a child row: a foreign key constraint fails (`db_clinica`.`caja`, CONSTRAINT `caja_ibfk_1` FOREIGN KEY (`idhistoria`) REFERENCES `historiaclinica` (`idhistoria`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `caja` S...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `caja` S...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `caja` S...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `caja` S...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\laragon\www\ProyectoClinica_ci\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(146): CodeIgniter\Model->update('2', Array)
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->actualizarDatos('2')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-03-18 16:48:35 --> Cannot add or update a child row: a foreign key constraint fails (`db_clinica`.`caja`, CONSTRAINT `caja_ibfk_1` FOREIGN KEY (`idhistoria`) REFERENCES `historiaclinica` (`idhistoria`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+CRITICAL - 2023-03-18 16:48:35 --> Cannot add or update a child row: a foreign key constraint fails (`db_clinica`.`caja`, CONSTRAINT `caja_ibfk_1` FOREIGN KEY (`idhistoria`) REFERENCES `historiaclinica` (`idhistoria`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `caja` S...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `caja` S...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `caja` S...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `caja` S...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\laragon\www\ProyectoClinica_ci\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(146): CodeIgniter\Model->update('2', Array)
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->actualizarDatos('2')
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-18 16:49:29 --> Undefined array key "idhistoria"
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\caja\actualizar.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 22)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('caja/actualizar', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(181): view('caja/actualizar')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(110): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->verRegistro('2')
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-18 16:49:37 --> Undefined array key "idhistoria"
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\caja\actualizar.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 22)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('caja/actualizar', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(181): view('caja/actualizar')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(110): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->verRegistro('2')
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-18 16:50:14 --> Undefined array key "idhistoria"
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\caja\actualizar.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 22)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('caja/actualizar', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(181): view('caja/actualizar')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(110): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->verRegistro('2')
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+=======
 =======
 ERROR - 2023-03-18 15:18:59 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: NO)
 CRITICAL - 2023-03-18 15:18:59 --> Unable to connect to the database.
@@ -510,6 +617,7 @@ Main connection [MySQLi]: Access denied for user '****'@'localhost' (using passw
 #8 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
 >>>>>>> rody
+<<<<<<< HEAD
 CRITICAL - 2023-03-18 19:30:02 --> Undefined array key "fecha_creacion"
 #0 C:\laragon\www\ProyectoClinica_ci\app\Views\caja\caja.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 87)
 #1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
@@ -587,6 +695,24 @@ CRITICAL - 2023-03-18 20:19:51 --> Trying to access array offset on value of typ
 #6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
 #7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
 #8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(46): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->index()
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+=======
+>>>>>>> 82b75922beac7b55a76aaebf9dbe75d1206acade
+>>>>>>> 5fa38b06188fa620e35fe2ca621cc205d1c71a57
+CRITICAL - 2023-03-18 20:55:24 --> Undefined array key "comentario"
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\caja\caja.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 77)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('caja/caja', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(184): view('caja/caja')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(50): view('index', Array)
 #9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->index()
 #10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
 #11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)

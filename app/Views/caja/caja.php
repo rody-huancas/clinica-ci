@@ -74,7 +74,7 @@
                                             <?php echo $row["nombreMedico"]; ?>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo $row["motivo"]; ?>
+                                            <?php echo $row["comentario"]; ?>
                                         </td>
                                         <td class="text-center">
                                             <?php echo $row["gestion"]; ?>

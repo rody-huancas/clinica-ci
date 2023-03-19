@@ -117,9 +117,53 @@ class Caja extends BaseController
     public function verRegistro($id)
     {
         $caja = $this->caja->getResultado($id);
-        $data["historia"] = $caja;
+        $data["caja"] = $caja;
         $data["titulo"] = "Actualizar Historia Clínica";
         $data["contenido"] = "caja/actualizar";
         return view("index", $data);
+    }
+
+    public function actualizarDatos($id)
+    {
+        if ($this->request->getMethod() == "post") {
+
+            $txt_IDHistoria = $this->request->getPost("txt_IDHistoria");
+            $referido = $this->request->getPost("referido");
+            $gestion = $this->request->getPost("gestion");
+            $comentario = $this->request->getPost("comentario");
+            $ingreso =  $this->request->getPost("ingreso");
+            $egreso_one =  $this->request->getPost("egreso_one");
+            $egreso_two =  $this->request->getPost("egreso_two");
+            $total = $ingreso - ($egreso_one + $egreso_two);
+            // Calcular la edad a partir de la fecha de nacimiento
+            $fechaNac = new DateTime();
+            $hoy = new DateTime();
+            $edad = $fechaNac->diff($hoy)->y;
+
+            // Generar código único
+
+            $data = [
+                'idhistoria' => $txt_IDHistoria,
+                'referido' => $referido,
+                'comentario' => $comentario,
+                'gestion' => $gestion,
+                'ingreso' =>  $ingreso,
+                'egreso_one' =>  $egreso_one,
+                'egreso_two' => $egreso_two,
+                'total' =>  $total,
+                'fecha_creacion' => date('d/m/y'),
+                'hora_creacion' => date('H:i:s')
+            ];
+
+            // Guardar registro en la base de datos
+            $this->caja->update($id, $data);
+            $this->session->setFlashdata("mensaje", "1");
+            $this->session->setFlashdata("texto", "Datos Actualizados correctamente");
+
+            return redirect()->to(base_url() . "/caja");
+        } else {
+            $data["contenido"] = "caja/actualizar";
+            return view("index", $data);
+        }
     }
 }

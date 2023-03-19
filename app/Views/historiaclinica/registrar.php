@@ -15,6 +15,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Nombre: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Ingrese el nombre">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('nombre') : ""; ?>
+                                </p>
                             </div>
                         </div><!-- col-4 -->
 
@@ -22,6 +25,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Apellidos: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="apellidos" id="apellidos" placeholder="Ingrese los Apellidos">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('apellidos') : ""; ?>
+                                </p>
                             </div>
                         </div><!-- col-4 -->
 
@@ -29,6 +35,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">DNI: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="dni" id="dni" placeholder="Ingrese el dni">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('dni') : ""; ?>
+                                </p>
                             </div>
                         </div><!-- col-4 -->
 
@@ -36,6 +45,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Dirección: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="direccion" id="direccion" placeholder="Ingrese la dirección">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('direccion') : ""; ?>
+                                </p>
                             </div>
                         </div><!-- col-8 -->
 
@@ -43,6 +55,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Télefono: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="telefonoPaciente" id="telefonoPaciente" placeholder="Ingrese número de telefono">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('telefonoPaciente') : ""; ?>
+                                </p>
                             </div>
                         </div><!-- col-4 -->
 
@@ -50,6 +65,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Fecha de Nacimiento: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="date" name="fecha" id="fecha">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('fecha') : ""; ?>
+                                </p>
                             </div>
                         </div><!-- col-4 -->
 
@@ -57,6 +75,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Distrito: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="distrito" id="distrito" placeholder="Ingrese el distrito">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('distrito') : ""; ?>
+                                </p>
                             </div>
                         </div>
 
@@ -64,6 +85,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Departamento: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="departamento" id="departamento" placeholder="Ingrese el departamento">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('departamento') : ""; ?>
+                                </p>
                             </div>
                         </div>
 
@@ -71,6 +95,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Provincia: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="provincia" id="provincia" placeholder="Ingrese la provincia">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('provincia') : ""; ?>
+                                </p>
                             </div>
                         </div>
 
@@ -80,6 +107,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Parentezco: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="parentezco" id="parentezco" placeholder="Ingrese el parentezco">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('parentezco') : ""; ?>
+                                </p>
                             </div>
                         </div><!-- col-8 -->
 
@@ -87,6 +117,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Telefono: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" id="telefono" name="telefono" placeholder="Ingrese el número de telefono">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('telefono') : ""; ?>
+                                </p>
                             </div>
                         </div>
 
@@ -94,6 +127,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">DNI del pariente: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="dniPariente" id="dniPariente" placeholder="Ingrese el número de DNI">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('dniPariente') : ""; ?>
+                                </p>
                             </div>
                         </div>
 
@@ -115,6 +151,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Nombre: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="nombreMedico" id="nombreMedico" placeholder="Nombre del médico" disabled>
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('txt_IDPersonal') : ""; ?>
+                                </p>
                             </div>
                         </div><!-- col-8 -->
 
@@ -129,6 +168,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Origen: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" id="origen" name="origen" placeholder="Origen">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('origen') : ""; ?>
+                                </p>
                             </div>
                         </div>
 
@@ -136,6 +178,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Motivo: <span class="tx-danger">*</span></label>
                                 <textarea class="form-control" name="motivo" id="motivo" placeholder="Ingrese el motivo" style="min-height: 70px;"></textarea>
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('motivo') : ""; ?>
+                                </p>
                             </div>
                         </div>
                     </div><!-- row -->

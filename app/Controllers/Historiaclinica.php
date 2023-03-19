@@ -12,6 +12,8 @@ class Historiaclinica extends BaseController
     protected $session;
     protected $db;
     protected $personalmedico;
+    protected $rules_historia;
+    protected $validacion;
 
     public function __construct()
     {
@@ -19,6 +21,7 @@ class Historiaclinica extends BaseController
             header('Location: ' . base_url() . '/login');
             die();
         }
+        $this->validacion = \Config\Services::validation();
         $this->historia = new HistoriaClinicaModel();
         $this->personalmedico = new PersonalMedicoModel();
         $this->session = \Config\Services::session();
@@ -34,9 +37,134 @@ class Historiaclinica extends BaseController
         return view('index', $data);
     }
 
+    public function reglas()
+    {
+        $this->rules_historia = [
+            "nombre" => [
+                "rules" => "required|max_length[20]",
+                "errors" => [
+                    "required" => "No se aceptan valores vacios.",
+                    "min_length" => "Cant. m�nima de caracteres: [5]",
+                    "max_length" => "Cant. m�xima de caracteres: [20]",
+                ]
+            ],
+            "apellidos" => [
+                "rules" => "required|max_length[30]",
+                "errors" => [
+                    "required" => "No se aceptan valores vacios.",
+                    "min_length" => "Cant. m�nima de caracteres: [5]",
+                    "max_length" => "Cant. maxima de caracteres: [30]",
+                ]
+            ],
+            "dni" => [
+                "rules" => "required|max_length[10]|is_unique[historiaclinica.dni,historiaclinica.idhistoria,{id_}]",
+                "errors" => [
+                    "required" => "No se aceptan valores vacios.",
+                    "max_length" => "Cant. m�xima de caracteres: [10]",
+                    "is_unique" => "Ya existe un registro",
+
+                ]
+            ],
+            "telefonoPaciente" => [
+                "rules" => "required|max_length[15]|is_unique[historiaclinica.telefonoPaciente,historiaclinica.idhistoria,{id_}]",
+                "errors" => [
+                    "required" => "No se aceptan valores vacios.",
+                    "min_length" => "Cant. m�nima de caracteres: [5]",
+                    "max_length" => "Cant. maxima de caracteres: [15]",
+                    "is_unique" => "Ya existe un registro",
+                ]
+            ],
+            "direccion" => [
+                "rules" => "required|max_length[30]",
+                "errors" => [
+                    "required" => "No se aceptan valores vacios.",
+                    "max_length" => "Cant. maxima de caracteres: [30]",
+                ]
+            ],
+            "fecha" => [
+                "rules" => "required",
+                "errors" => [
+                    "required" => "Debe seleccionar un valor.",
+                ]
+            ],
+            "distrito" => [
+                "rules" => "required|max_length[15]",
+                "errors" => [
+                    "required" => "Debe seleccionar un valor.",
+                    "max_length" => "Cant. maxima de caracteres: [15]",
+
+                ]
+
+            ],
+            "departamento" => [
+                "rules" => "required|max_length[15]",
+                "errors" => [
+                    "required" => "Debe seleccionar un valor.",
+                    "max_length" => "Cant. maxima de caracteres: [15]",
+
+                ]
+
+            ],
+            "provincia" => [
+                "rules" => "required|max_length[15]",
+                "errors" => [
+                    "required" => "Debe seleccionar un valor.",
+                    "max_length" => "Cant. maxima de caracteres: [15]",
+
+                ]
+
+            ],
+            "parentezco" => [
+                "rules" => "required|max_length[20]",
+                "errors" => [
+                    "required" => "No se aceptan valores vacios.",
+                    "max_length" => "Cant. m�xima de caracteres: [20]",
+                ]
+            ],
+            "telefono" => [
+                "rules" => "required|max_length[15]|is_unique[historiaclinica.telefono,historiaclinica.idhistoria,{id_}]",
+                "errors" => [
+                    "required" => "No se aceptan valores vacios.",
+                    "max_length" => "Cant. maxima de caracteres: [15]",
+                    "is_unique" => "Ya existe un registro",
+                ]
+            ],
+            "dniPariente" => [
+                "rules" => "required|max_length[10]|is_unique[historiaclinica.dnifamiliar,historiaclinica.idhistoria,{id_}]",
+                "errors" => [
+                    "required" => "No se aceptan valores vacios.",
+                    "max_length" => "Cant. m�xima de caracteres: [10]",
+                ]
+            ],
+            "motivo" => [
+                "rules" => "required|max_length[30]",
+                "errors" => [
+                    "required" => "No se aceptan valores vacios.",
+                    "max_length" => "Cant. m�xima de caracteres: [30]",
+                ]
+            ],
+            "txt_IDPersonal" => [
+                "rules" => "is_not_unique[personal.idPersonal]",
+                "errors" => [
+                    "is_not_unique" => "Valores no permitidos",
+                ]
+            ],
+            "origen" => [
+                "rules" => "required|max_length[30]",
+                "errors" => [
+                    "required" => "No se aceptan valores vacios.",
+                    "max_length" => "Cant. m�xima de caracteres: [30]",
+                ]
+            ]
+        ];
+        return $this->rules_historia;
+    }
+
+
     public function registrar()
     {
         $data["historia"] = $this->historia->findAll();
+        $data["personal"] = $this->personalmedico->findAll();
         $data["titulo"] = "Registrar Nueva Historia Clínica";
         $data["contenido"] = "historiaclinica/registrar";
         return view("index", $data);
@@ -61,7 +189,7 @@ class Historiaclinica extends BaseController
         // Establecer la zona horaria
         // date_default_timezone_set('America/Lima');
 
-        if ($this->request->getMethod() == "post") {
+        if ($this->request->getMethod() == "post" && $this->validate($this->reglas())) {
             $nombre = $this->request->getPost("nombre");
             $apellidos = $this->request->getPost("apellidos");
             $dni = $this->request->getPost("dni");
@@ -115,6 +243,10 @@ class Historiaclinica extends BaseController
 
             return redirect()->to(base_url() . "/historiaclinica");
         } else {
+            $data["validation"] = $this->validator;
+            $data["personal"] = $this->personalmedico->findAll();
+            $data["historia"] = $this->historia->findAll();
+            $data["titulo"] = "Registrar Nueva Historia Clínica";
             $data["contenido"] = "historiaclinica/registrar";
             return view("index", $data);
         }
@@ -137,6 +269,7 @@ class Historiaclinica extends BaseController
     {
         if ($this->request->getMethod() == "post") {
             $id = $this->request->getPost("id_");
+
             $nombre = $this->request->getPost("nombre");
             $apellidos = $this->request->getPost("apellidos");
             $dni = $this->request->getPost("dni");
@@ -185,7 +318,10 @@ class Historiaclinica extends BaseController
 
             return redirect()->to(base_url() . "/historiaclinica");
         } else {
+            $data["historiaclinica"] = $this->historia->where("idhistoria", $id)->first();
+            $data["validation"] = $this->validator;
             $historia = $this->historia->getResultado($id);
+            $data["personal"] = $this->personalmedico->findAll();
             $data["historia"] = $historia;
             $data["titulo"] = "Actualizar Historia Clínica";
             $data["contenido"] = "historiaclinica/actualizar";

@@ -223,14 +223,14 @@
           extend: 'excelHtml5',
           title: "REPORTE DE CAJA - ENFOQUE SALUD",
           exportOptions: {
-            columns: [6, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            columns: [6, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
           }
         },
         {
           extend: 'pdfHtml5',
           title: "REPORTE DE CAJA - ENFOQUE SALUD",
           exportOptions: {
-            columns: [6, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            columns: [6, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
           }
 
         }

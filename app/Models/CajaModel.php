@@ -43,6 +43,7 @@ class CajaModel extends Model
             caja.idCaja,
             caja.gestion,
             caja.referido,
+            caja.fecha_creacion,
             caja.ingreso,
             caja.egreso_one,
             caja.egreso_two,
@@ -116,6 +117,55 @@ class CajaModel extends Model
         $this->where('caja.idCaja', $id);
 
         $query = $this->first();
+        return $query;
+    }
+    public function getVentasbyDate($fechaincio, $fechafin)
+    {
+        $this->select("
+        caja.idCaja,
+        caja.gestion,
+        caja.referido,
+        caja.comentario,
+        caja.fecha_creacion,
+        caja.ingreso,
+        caja.egreso_one,
+        caja.egreso_two,
+        caja.total,
+        historiaclinica.codigohistoria,
+        historiaclinica.telefonoPaciente,
+        historiaclinica.edad,
+        historiaclinica.fechaNac,
+        historiaclinica.distrito,
+        historiaclinica.departamento,
+        historiaclinica.direccion,
+        historiaclinica.fechaCreacion,
+        historiaclinica.provincia,
+        historiaclinica.horaCreacion,
+        historiaclinica.parentezco,
+        historiaclinica.telefono,
+        historiaclinica.dni,
+        historiaclinica.dnifamiliar,
+        historiaclinica.idPersonal,
+        historiaclinica.motivo,
+        historiaclinica.origen,
+        concat_ws(' ', historiaclinica.nombres,historiaclinica.apellidos) as nombrePaciente,
+        concat_ws(' ', personal.nombre,personal.apellidos) as nombreMedico,
+        tipoespecialidad.nombre as nombreEspecialidad
+        ");
+
+        $this->join('historiaclinica', 'historiaclinica.idhistoria = caja.idhistoria');
+        $this->join('personal', 'historiaclinica.idPersonal = personal.idPersonal');
+        $this->join('tipoespecialidad', 'personal.idTipoEspecialidad = tipoespecialidad.idTipoEspecialidad');
+
+        if ($fechaincio && $fechafin) {
+            $this->where('caja.fecha_creacion >=', $fechaincio);
+            $this->where('caja.fecha_creacion <=', $fechafin);
+            echo "Filtrando por fechas";
+        } else {
+            echo "No se han proporcionado fechas";
+        }
+
+        $query = $this->findAll();
         return $query;
     }
 }

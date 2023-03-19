@@ -11,6 +11,7 @@
 
                         <!-- datos paciente -->
                         <h4 class="col-12 tx-gray-800 border-top-secondary mt-3 mb-3">Datos del Paciente</h4>
+                        <input type="hidden" name="id_" value="<?= $caja["idCaja"] ?>">
 
                         <div class="col-lg-12">
                             <a class="btn btn-app btn-info text-white mb-3 w-25" data-toggle="modal" data-target="#modalBusqueda" data-backdrop="static" data-keyboard="false">

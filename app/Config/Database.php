@@ -34,7 +34,7 @@ class Database extends Config
         'DSN'      => '',
         'hostname' => 'localhost',
         'username' => 'root',
-        'password' => 'rody1999',
+        'password' => '',
         'database' => 'db_clinica',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',

@@ -72,7 +72,7 @@
           <a href="<?php echo base_url(); ?>/usuarios" class="nav-link">Listar Usuarios</a>
         </li>
         <li class="nav-item">
-          <a href="<?php echo base_url(); ?>/pacientes" class="nav-link">Listar Pacientes</a>
+          <!-- <a href="<?php echo base_url(); ?>/pacientes" class="nav-link">Listar Pacientes</a> -->
         </li>
 
       </ul>

@@ -207,7 +207,7 @@
                 <div class="col-sm-7">
                     <form action='#' id="formBusqueda" autocomplete="off">
                         <?= csrf_field() ?>
-                        <input type="text" class="form-control form-control-sm" id="txtBusqueda" name="txtBusqueda" placeholder="nombres O apellidos OR documento" onkeyup="keyBusqueda(this.value)">
+                        <input type="text" class="form-control form-control-sm" id="txtBusqueda" name="txtBusqueda" placeholder="Ingrese el nombre o apellido" onkeyup="keyBusqueda(this.value)">
                     </form>
                 </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

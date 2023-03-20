@@ -1,0 +1,11 @@
+CRITICAL - 2023-03-19 14:06:43 --> getimagesize(http://localhost/ProyectoClinica_ci/public/dist/images/clinica-cercado.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(ht...', 'C:\\laragon\\www\\...', 1237)
+#1 C:\laragon\www\ProyectoClinica_ci\app\ThirdParty\fpdf\fpdf.php(1237): getimagesize('http://localhos...')
+#2 C:\laragon\www\ProyectoClinica_ci\app\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhos...')
+#3 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(366): FPDF->Image('http://localhos...', 45, 20, 45, 40, 'jpg')
+#4 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->generarPDF(' 1')
+#5 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
+#6 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}

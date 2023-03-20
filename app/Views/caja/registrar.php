@@ -81,7 +81,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Ingreso: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="ingreso" name="ingreso" placeholder="Ingreso" value="<?= set_value('ingreso') ?>">
+                                <input class="form-control" type="number" id="ingreso" name="ingreso" placeholder="Ingreso" value="<?= set_value('ingreso') ?>">
                                 <p id="errNom" style="color:red">
                                     <?php echo (isset($validation)) ? $validation->getError('ingreso') : ""; ?>
                                 </p>
@@ -90,7 +90,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Egreso 1: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="egreso_one" name="egreso_one" placeholder="Egreso 1" value="<?= set_value('egreso_one') ?>">
+                                <input class="form-control" type="number" id="egreso_one" name="egreso_one" placeholder="Egreso 1" value="<?= set_value('egreso_one') ?>">
                                 <p id="errNom" style="color:red">
                                     <?php echo (isset($validation)) ? $validation->getError('egreso_one') : ""; ?>
                                 </p>
@@ -99,7 +99,7 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Egreso 2: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="egreso_two" name="egreso_two" placeholder="Egreso 2" value="<?= set_value('egreso_two') ?>">
+                                <input class="form-control" type="number" id="egreso_two" name="egreso_two" placeholder="Egreso 2" value="<?= set_value('egreso_two') ?>">
                                 <p id="errNom" style="color:red">
                                     <?php echo (isset($validation)) ? $validation->getError('egreso_two') : ""; ?>
                                 </p>

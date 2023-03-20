@@ -60,9 +60,9 @@
                                 <?php $cont = 0;
                                 foreach ($caja as $row) : $cont++; ?>
                                     <tr>
-                                        <td class="d-flex">
+                                        <td class="d-flex align-items-center justify-content-center">
                                             <a href="<?php echo base_url() ?>/caja/verRegistro/<?php echo $row["idCaja"]; ?>" class="btn btn-primary btn-sm ml-1"><i class="icon ion-edit"></i></a>
-                                            <a href=#" class="btn btn-info btn-sm ml-1"><i class="icon ion-eye"></i></a>
+                                            <!-- <a href=#" class="btn btn-info btn-sm ml-1"><i class="icon ion-eye"></i></a> -->
                                         </td>
                                         <td class="text-center">
                                             <?php echo $cont ?></php>

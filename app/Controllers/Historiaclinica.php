@@ -160,7 +160,6 @@ class Historiaclinica extends BaseController
         return $this->rules_historia;
     }
 
-
     public function registrar()
     {
         $data["historia"] = $this->historia->findAll();
@@ -212,7 +211,7 @@ class Historiaclinica extends BaseController
             $edad = $fechaNac->diff($hoy)->y;
 
             // Generar código único
-            $cc_code = 'CC-' . str_pad($this->db->table('historiaclinica')->countAllResults() + 1, 7, '0', STR_PAD_LEFT);
+            $cc_code = 'ES-' . str_pad($this->db->table('historiaclinica')->countAllResults() + 1, 7, '0', STR_PAD_LEFT);
 
             $data = [
                 "codigohistoria" => $cc_code,
@@ -363,7 +362,7 @@ class Historiaclinica extends BaseController
         $pdf->SetFont('Arial', 'B', 11);
 
         // header
-        $pdf->Image(base_url() . '/public/dist/images/clinica-cercado.jpg', 45, 20, 45, 40, 'JPG');
+        $pdf->Image(base_url() . '/public/dist/images/enfoque-salud.jpg', 45, 20, 45, 40, 'JPG');
         // N° de historia
         $pdf->Cell(130, 40, utf8_decode("N° de historia: "), 0, 1, 'R');
         $pdf->SetFont('Arial', '', 11);
@@ -457,7 +456,7 @@ class Historiaclinica extends BaseController
         $pdf->Cell(0, 5, "", 0, 1, 'C');
 
         $this->response->setHeader('Content-Type', 'application/pdf');
-        $pdf->Output("Enfoque Salud - " . $clinica["nombres"] . " " . $clinica["apellidos"] . ".pdf", "I");
+        $pdf->Output("Enfoque Salud - " . utf8_decode($clinica["nombres"]) . " " . utf8_decode($clinica["apellidos"]) . ".pdf", "I");
     }
 
 

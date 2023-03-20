@@ -9,7 +9,7 @@
             <!-- Los estilos están en: public/styles/estilos.css -->
             <div class="historia">
                 <div class="historia__container-header">
-                    <img class="hitoria__img" src="<?php echo base_url(); ?>/public/dist/images/clinica-cercado.jpg" alt="Logo clinica cercado">
+                    <img class="hitoria__img" src="<?php echo base_url(); ?>/public/dist/images/enfoque-salud.jpg" alt="Logo clinica cercado" width="150px">
                     <div class="hitoria__header">
                         <p class="historia__item">N° de Historia: <span><?= $historia["codigohistoria"] ?></span></p>
                         <p class="historia__item">Fecha: <span><?= $historia["fechaCreacion"] ?></span></p>
@@ -32,12 +32,12 @@
                         <p class="historia__item">Télefono: <span><?= $historia["telefonoPaciente"] ?></span></p>
                     </div>
 
-                    <h2 class="historia__titulo">Datos del Familiar</h2>
+                    <!-- <h2 class="historia__titulo">Datos del Familiar</h2>
                     <div class="historia__container">
                         <p class="historia__item">Parentezco: <span><?= $historia["parentezco"] ?></span></p>
                         <p class="historia__item">DNI: <span><?= $historia["dnifamiliar"] ?></span></p>
                         <p class="historia__item">Télefono: <span><?= $historia["telefono"] ?></span></p>
-                    </div>
+                    </div> -->
 
                     <h2 class="historia__titulo">Datos del Médico</h2>
                     <div class="historia__container">

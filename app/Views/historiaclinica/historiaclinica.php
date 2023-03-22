@@ -106,5 +106,19 @@
         });
     }
 
+    
+  $('#datatable1').DataTable({
+    "aProcessing": true,
+    "aServerSide": true,
+    "language": {
+      "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json"
+    },
+    "resonsieve": "true",
+    "bDestroy": true,
+    "iDisplayLength": 10,
+    "order": [
+      [0, "desc"]
+    ]
+  });
    
 </script>

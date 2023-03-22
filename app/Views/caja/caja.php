@@ -45,7 +45,6 @@
                                     <th class="text-center wd-5p">Opciones</th>
                                     <th class="text-center wd-3p">N°</th>
                                     <th class="text-center wd-40p">Nombre Completo</th>
-                                    <th class="text-center wd-20p">Médico</th>
                                     <th class="text-center wd-20p">Descripción</th>
                                     <th class="text-center wd-20p">Gestión</th>
                                     <th class="text-center wd-20p">Referido</th>
@@ -68,10 +67,7 @@
                                             <?php echo $cont ?></php>
                                         </td>
                                         <td class="text-center">
-                                            <?php echo $row["nombrePaciente"]; ?>
-                                        </td>
-                                        <td class="text-center">
-                                            <?php echo $row["nombreMedico"]; ?>
+                                            <?php echo $row["nombre"]; ?>
                                         </td>
                                         <td class="text-center">
                                             <?php echo $row["comentario"]; ?>

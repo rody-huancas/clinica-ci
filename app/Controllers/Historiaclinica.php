@@ -33,7 +33,7 @@ class Historiaclinica extends BaseController
     {
         $data['titulo'] = "Historias Clínicas";
         $data['contenido'] = 'historiaclinica/historiaclinica';
-        $data["historia"] = $this->historia->findAll();
+        $data["historia"] = $this->historia->getResultados();
         return view('index', $data);
     }
 

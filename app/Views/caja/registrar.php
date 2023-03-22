@@ -20,6 +20,13 @@
                             </a>
                         </div>
 
+                        <div class="col-lg-12">
+                            <a class="btn btn-app btn-info text-white mb-3 w-25" data-toggle="modal" data-target="#modalBusqueda2" data-backdrop="static" data-keyboard="false">
+                                <i class="fas fa-search"></i>
+                                Persona General
+                            </a>
+                        </div>
+
                         <input type="hidden" class="form-control form-control-sm" name="txt_IDHistoria" id="txt_IDPersonal">
 
                         <div class="col-lg-4">
@@ -162,7 +169,77 @@
 </div>
 
 
+<div class="modal form-modal w-100" id="modalBusqueda2" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-lg w-100">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-sm-3">
+                    <h4 class="modal-title" id="title" style="font-size: 18px;">Buscar Paciente</h4>
+                </div>
+                <div class="col-sm-7">
+                    <form action='#' id="formBusqueda" autocomplete="off">
+                        <?= csrf_field() ?>
+                        <input type="text" class="form-control form-control-sm" id="txtBusqueda" name="txtBusqueda" placeholder="Ingrese el nombre, apellido o el dni" onkeyup="noTieneHistoria(this.value)">
+                    </form>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row justify-content-center">
+                    <div class="form-group col-md-12 ">
+                        <table class=" table table-bordered bg-light table-sm table-hover table-striped " id="tblBusqueda2">
+                            <thead class="">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Nombre del paciente</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
+
+function noTieneHistoria(val) {
+        if (val != "") {
+            $.ajax({
+                url: "<?php echo base_url() ?>/caja/keyBusquedaPersonalGeneral/" + val,
+                method: "post",
+                dataType: "json",
+                success: function(response) {
+                    $("#tblBusqueda2>tbody").empty();
+                    let cont = 0;
+                    if (response.historiaclinica) {
+                        $.each(response.historiaclinica, function(idx, val) {
+                            cont++;
+                            $("#tblBusqueda2>tbody").append("<tr>\
+                                                        <td>" + cont + "</td>\
+                                                        <td>" + val.paciente + "</td>\
+                                                        <td class='text-center'>\
+                                                            <button class='btn btn-info btn-xs' onclick='mostrarPacienteGeneral(" + val.idhistoria + ")'>\
+                                                            <i class='fas fa-arrow-circle-right'></i>\
+                                                            </button>\
+                                                        </td>\
+                                                        </tr>");
+                        });
+                    } else {
+                        $("#tblBusqueda2>tbody").empty();
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {}
+            });
+        }
+
+    }
+
     function keyBusqueda(val) {
         if (val != "") {
             $.ajax({
@@ -208,9 +285,28 @@
                 $("#modalBusqueda").modal("hide");
                 //limpiarForm();
                 $('[name="txt_IDHistoria"]').val(response.historiaclinica.idhistoria);
-                $('[name="nombrePaciente"]').val(response.historiaclinica.nombres).prop("disabled", true);
+                $('[name="nombrePaciente"]').val(response.historiaclinica.nombres).prop("disabled", false);
                 $('[name="medico"]').val(response.historiaclinica.nombreMedico).prop("disabled", true);
                 $('[name="descripcion"]').val(response.historiaclinica.motivo).prop("disabled", true);
+
+
+            },
+            error: function(jqXHR, textStatus, errorThrown) {}
+        });
+    }
+
+    function mostrarPacienteGeneral(idhistoria) {
+        $.ajax({
+            url: "<?php echo base_url() ?>/caja/mostrarPacienteIDgeneral/" + idhistoria,
+            method: "post",
+            dataType: "json",
+            success: function(response) {
+                $("#modalBusqueda2").modal("hide");
+                //limpiarForm();
+                $('[name="txt_IDHistoria"]').val(response.historiaclinica.idhistoria);
+                $('[name="nombrePaciente"]').prop("disabled", false);
+                $('[name="medico"]').prop("disabled", false);
+                $('[name="descripcion"]').prop("disabled", false);
 
 
             },

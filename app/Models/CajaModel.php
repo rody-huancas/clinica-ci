@@ -17,6 +17,7 @@ class CajaModel extends Model
 
     protected $allowedFields = [
         'idhistoria',
+        'nombre',
         'referido',
         'comentario',
         'gestion',
@@ -42,6 +43,7 @@ class CajaModel extends Model
         $this->select("
             caja.idCaja,
             caja.gestion,
+            caja.nombre,
             caja.referido,
             caja.fecha_creacion,
             caja.ingreso,
@@ -77,6 +79,8 @@ class CajaModel extends Model
         $query = $this->findAll();
         return $query;
     }
+
+
 
     public function getResultado($id)
     {

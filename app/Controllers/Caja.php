@@ -120,9 +120,22 @@ class Caja extends BaseController
         return view("index", $data);
     }
 
+    public function keyBusquedaPersonalGeneral($value)
+    {
+        $query = $this->historia->getBusquedaGeneral($value);
+        return json_encode(array("historiaclinica" => $query));
+    }
+
     public function keyBusqueda($value)
     {
         $query = $this->historia->getBusqueda($value);
+        return json_encode(array("historiaclinica" => $query));
+    }
+
+
+    public function mostrarPacienteIDgeneral($idhistoria)
+    {
+        $query = $this->historia->getResultadosID($idhistoria);
         return json_encode(array("historiaclinica" => $query));
     }
 
@@ -138,6 +151,7 @@ class Caja extends BaseController
         if ($this->request->getMethod() == "post" && $this->validate($this->reglas())) {
 
             $txt_IDHistoria = $this->request->getPost("txt_IDHistoria");
+            $nombrePaciente = $this->request->getPost("nombrePaciente");
             $referido = $this->request->getPost("referido");
             $gestion = $this->request->getPost("gestion");
             $comentario = $this->request->getPost("comentario");
@@ -154,6 +168,7 @@ class Caja extends BaseController
 
             $data = [
                 'idhistoria' => $txt_IDHistoria,
+                'nombre' => $nombrePaciente,
                 'referido' => $referido,
                 'comentario' => $comentario,
                 'gestion' => $gestion,

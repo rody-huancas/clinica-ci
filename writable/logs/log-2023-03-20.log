@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ERROR - 2023-03-20 12:42:14 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
 CRITICAL - 2023-03-20 12:42:14 --> Unable to connect to the database.
 Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
@@ -13,6 +14,10 @@ Main connection [MySQLi]: Access denied for user '****'@'localhost' (using passw
 #9 {main}
 CRITICAL - 2023-03-20 12:44:27 --> foreach() argument must be of type array|object, null given
 #0 C:\laragon\www\ProyectoClinica_ci\app\Views\historiaclinica\historiaclinica.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\laragon\\www\\...', 40)
+=======
+CRITICAL - 2023-03-20 16:49:41 --> Undefined array key "fecha"
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\historiaclinica\actualizar.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 68)
+>>>>>>> historia
 #1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
 #2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
 #3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('historiaclinica...', Array, true)
@@ -20,12 +25,18 @@ CRITICAL - 2023-03-20 12:44:27 --> foreach() argument must be of type array|obje
 #5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
 #6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
 #7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+<<<<<<< HEAD
 #8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(37): view('index', Array)
 #9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->index()
+=======
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Historiaclinica.php(233): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Historiaclinica->verRegistro('3')
+>>>>>>> historia
 #10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Historiaclinica))
 #11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
 #13 {main}
+<<<<<<< HEAD
 CRITICAL - 2023-03-20 12:45:01 --> foreach() argument must be of type array|object, null given
 #0 C:\laragon\www\ProyectoClinica_ci\app\Views\historiaclinica\historiaclinica.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'C:\\laragon\\www\\...', 40)
 #1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
@@ -281,3 +292,5 @@ CRITICAL - 2023-03-20 14:06:42 --> You have an error in your SQL syntax; check t
 #10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
 #12 {main}
+=======
+>>>>>>> historia

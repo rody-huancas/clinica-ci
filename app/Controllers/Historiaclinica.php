@@ -44,15 +44,15 @@ class Historiaclinica extends BaseController
                 "rules" => "required|max_length[20]",
                 "errors" => [
                     "required" => "No se aceptan valores vacios.",
-                    "min_length" => "Cant. m�nima de caracteres: [5]",
-                    "max_length" => "Cant. m�xima de caracteres: [20]",
+                    "min_length" => "Cant. mínima de caracteres: [5]",
+                    "max_length" => "Cant. máxima de caracteres: [20]",
                 ]
             ],
             "apellidos" => [
                 "rules" => "required|max_length[30]",
                 "errors" => [
                     "required" => "No se aceptan valores vacios.",
-                    "min_length" => "Cant. m�nima de caracteres: [5]",
+                    "min_length" => "Cant. mínima de caracteres: [5]",
                     "max_length" => "Cant. maxima de caracteres: [30]",
                 ]
             ],
@@ -60,7 +60,7 @@ class Historiaclinica extends BaseController
                 "rules" => "required|max_length[10]|is_unique[historiaclinica.dni,historiaclinica.idhistoria,{id_}]",
                 "errors" => [
                     "required" => "No se aceptan valores vacios.",
-                    "max_length" => "Cant. m�xima de caracteres: [10]",
+                    "max_length" => "Cant. máxima de caracteres: [10]",
                     "is_unique" => "Ya existe un registro",
 
                 ]
@@ -69,7 +69,7 @@ class Historiaclinica extends BaseController
                 "rules" => "required|max_length[15]|is_unique[historiaclinica.telefonoPaciente,historiaclinica.idhistoria,{id_}]",
                 "errors" => [
                     "required" => "No se aceptan valores vacios.",
-                    "min_length" => "Cant. m�nima de caracteres: [5]",
+                    "min_length" => "Cant. mínima de caracteres: [5]",
                     "max_length" => "Cant. maxima de caracteres: [15]",
                     "is_unique" => "Ya existe un registro",
                 ]
@@ -114,33 +114,11 @@ class Historiaclinica extends BaseController
                 ]
 
             ],
-            "parentezco" => [
-                "rules" => "required|max_length[20]",
-                "errors" => [
-                    "required" => "No se aceptan valores vacios.",
-                    "max_length" => "Cant. m�xima de caracteres: [20]",
-                ]
-            ],
-            "telefono" => [
-                "rules" => "required|max_length[15]|is_unique[historiaclinica.telefono,historiaclinica.idhistoria,{id_}]",
-                "errors" => [
-                    "required" => "No se aceptan valores vacios.",
-                    "max_length" => "Cant. maxima de caracteres: [15]",
-                    "is_unique" => "Ya existe un registro",
-                ]
-            ],
-            "dniPariente" => [
-                "rules" => "required|max_length[10]|is_unique[historiaclinica.dnifamiliar,historiaclinica.idhistoria,{id_}]",
-                "errors" => [
-                    "required" => "No se aceptan valores vacios.",
-                    "max_length" => "Cant. m�xima de caracteres: [10]",
-                ]
-            ],
             "motivo" => [
                 "rules" => "required|max_length[30]",
                 "errors" => [
                     "required" => "No se aceptan valores vacios.",
-                    "max_length" => "Cant. m�xima de caracteres: [30]",
+                    "max_length" => "Cant. máxima de caracteres: [30]",
                 ]
             ],
             "txt_IDPersonal" => [
@@ -153,7 +131,7 @@ class Historiaclinica extends BaseController
                 "rules" => "required|max_length[30]",
                 "errors" => [
                     "required" => "No se aceptan valores vacios.",
-                    "max_length" => "Cant. m�xima de caracteres: [30]",
+                    "max_length" => "Cant. máxima de caracteres: [30]",
                 ]
             ]
         ];
@@ -198,9 +176,6 @@ class Historiaclinica extends BaseController
             $distrito = $this->request->getPost("distrito");
             $departamento = $this->request->getPost("departamento");
             $provincia = $this->request->getPost("provincia");
-            $parentezco = $this->request->getPost("parentezco");
-            $telefono = $this->request->getPost("telefono");
-            $dniPariente = $this->request->getPost("dniPariente");
             $txt_IDPersonal = $this->request->getPost("txt_IDPersonal");
             $motivo = $this->request->getPost("motivo");
             $origen = $this->request->getPost("origen");
@@ -223,13 +198,10 @@ class Historiaclinica extends BaseController
                 "distrito" => $distrito,
                 "departamento" => $departamento,
                 "direccion" => $direccion,
-                "fechaCreacion" => date('d/m/y'),
+                "fechaCreacion" => date('Y-m-d'),
                 "horaCreacion" => date('H:i:s'),
                 "provincia" => $provincia,
-                "parentezco" => $parentezco,
-                "telefono" => $telefono,
                 "dni" => $dni,
-                "dnifamiliar" => $dniPariente,
                 "idPersonal" => $txt_IDPersonal,
                 "motivo" => $motivo,
                 "origen" => $origen
@@ -266,7 +238,7 @@ class Historiaclinica extends BaseController
     // Actualizar Usuario
     public function actualizarDatos($id)
     {
-        if ($this->request->getMethod() == "post") {
+        if ($this->request->getMethod() == "post" && $this->validate($this->reglas())) {
             $id = $this->request->getPost("id_");
 
             $nombre = $this->request->getPost("nombre");
@@ -278,9 +250,6 @@ class Historiaclinica extends BaseController
             $distrito = $this->request->getPost("distrito");
             $departamento = $this->request->getPost("departamento");
             $provincia = $this->request->getPost("provincia");
-            $parentezco = $this->request->getPost("parentezco");
-            $telefono = $this->request->getPost("telefono");
-            $dniPariente = $this->request->getPost("dniPariente");
             $txt_IDPersonal = $this->request->getPost("txt_IDPersonal");
             $motivo = $this->request->getPost("motivo");
             $origen = $this->request->getPost("origen");
@@ -301,10 +270,7 @@ class Historiaclinica extends BaseController
                 "departamento" => $departamento,
                 "direccion" => $direccion,
                 "provincia" => $provincia,
-                "parentezco" => $parentezco,
-                "telefono" => $telefono,
                 "dni" => $dni,
-                "dnifamiliar" => $dniPariente,
                 "idPersonal" => $txt_IDPersonal,
                 "motivo" => $motivo,
                 "origen" => $origen
@@ -457,14 +423,5 @@ class Historiaclinica extends BaseController
 
         $this->response->setHeader('Content-Type', 'application/pdf');
         $pdf->Output("Enfoque Salud - " . utf8_decode($clinica["nombres"]) . " " . utf8_decode($clinica["apellidos"]) . ".pdf", "I");
-    }
-
-
-
-
-
-    // Eliminar datos
-    public function eliminarRegistro($id)
-    {
     }
 }

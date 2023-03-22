@@ -65,8 +65,8 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Fecha de Nacimiento: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="date" name="fecha" id="fecha" value="<?= $historia["fechaNac"] ?>">
-                                <p id="errNom" style="color:red">
+                                <input class="form-control" type="date" name="fecha" id="fecha" value="<?= $historia['fechaNac'] ?>" max="<?= date('Y-m-d') ?>">
+                                <p id="errFecha" style="color:red">
                                     <?php echo (isset($validation)) ? $validation->getError('fecha') : ""; ?>
                                 </p>
                             </div>
@@ -102,39 +102,6 @@
                             </div>
                         </div>
 
-                        <h4 class="col-12 tx-gray-800 border-top-secondary mt-3 mb-3" style="border-top: 2px solid #E9ECEF; padding-top: 15px;">Datos del Familiar</h4>
-
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label class="form-control-label">Parentezco: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" name="parentezco" id="parentezco" placeholder="Ingrese el parentezco" value="<?= $historia["parentezco"] ?>">
-                                <p id="errNom" style="color:red">
-                                    <?php echo (isset($validation)) ? $validation->getError('parentezco') : ""; ?>
-                                </p>
-                            </div>
-                        </div><!-- col-8 -->
-
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label class="form-control-label">Telefono: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" id="telefono" name="telefono" placeholder="Ingrese el número de telefono" value="<?= $historia["telefono"] ?>">
-                                <p id="errNom" style="color:red">
-                                    <?php echo (isset($validation)) ? $validation->getError('telefono') : ""; ?>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label class="form-control-label">DNI del pariente: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="text" name="dniPariente" id="dniPariente" placeholder="Ingrese el número de DNI" value="<?= $historia["dnifamiliar"] ?>">
-                                <p id="errNom" style="color:red">
-                                    <?php echo (isset($validation)) ? $validation->getError('dniPariente') : ""; ?>
-                                </p>
-                            </div>
-                        </div>
-
-
                         <h4 class="col-12 tx-gray-800 border-top-secondary mt-3 mb-3" style="border-top: 2px solid #E9ECEF; padding-top: 15px;">Datos del Médico</h4>
 
                         <div class="col-lg-12">
@@ -147,7 +114,7 @@
 
                         <input type="hidden" class="form-control form-control-sm" name="txt_IDPersonal" id="txt_IDPersonal" value="<?= $historia["idPersonal"] ?>">
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Nombre: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" name="nombreMedico" id="nombreMedico" placeholder="Nombre del médico" value="<?= $historia["nombreMedico"] ?>" disabled>
@@ -157,10 +124,21 @@
                             </div>
                         </div><!-- col-8 -->
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Especialidad: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="text" id="especialidad" name="especialidad" placeholder="Nombre de especialidad" value="<?= $historia["nombreEspecialidad"] ?>" disabled>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="form-control-label">Origen: <span class="tx-danger">*</span></label>
+                                <input class="form-control" type="text" id="origen" name="origen" placeholder="Origen" value="<?= $historia["origen"] ?>">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('origen') : ""; ?>
+                                </p>
                             </div>
                         </div>
 

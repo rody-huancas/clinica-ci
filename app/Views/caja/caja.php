@@ -46,6 +46,7 @@
                                     <th class="text-center wd-3p">N°</th>
                                     <th class="text-center wd-40p">Nombre Completo</th>
                                     <th class="text-center wd-20p">Descripción</th>
+                                    <th class="text-center wd-40p">Nombre Medico</th>
                                     <th class="text-center wd-20p">Gestión</th>
                                     <th class="text-center wd-20p">Referido</th>
                                     <th class="text-center wd-20p">Fecha</th>
@@ -71,6 +72,9 @@
                                         </td>
                                         <td class="text-center">
                                             <?php echo $row["comentario"]; ?>
+                                        </td>
+                                        <td class="text-center">
+                                            <?php echo $row["nombreMedico"]; ?>
                                         </td>
                                         <td class="text-center">
                                             <?php echo $row["gestion"]; ?>

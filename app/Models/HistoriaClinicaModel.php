@@ -123,68 +123,15 @@ class HistoriaClinicaModel extends Model
                          historiaclinica.dni");
 
         $this->join("personal", "personal.idPersonal = historiaclinica.idPersonal");
-
-        $this->like("historiaclinica.nombres", $value);
-        $this->orLike("historiaclinica.apellidos", $value);
-        $this->orLike("personal.nombre", $value);
-        $this->orLike("historiaclinica.motivo", $value);
-        $this->orLike("historiaclinica.dni", $value);
+        $this->where("historiaclinica.idhistoria >", 1);
         $query = $this->findAll();
         return $query;
 
        
     }
 
-    public function getBusquedaGeneral($value)
-    {
-        $this->select("historiaclinica.idhistoria,
-                         concat_ws(' ', historiaclinica.nombres, historiaclinica.apellidos) as paciente,
-                         personal.nombre,
-                         historiaclinica.motivo,
-                         historiaclinica.dni");
 
-        $this->join("personal", "personal.idPersonal = historiaclinica.idPersonal");
 
-        $this->where("historiaclinica.idhistoria =", 1);
-
-        $query = $this->findAll();
-
-        return $query;
-
-    }
-
-    public function getResultadosIDGeneral($idhistoria)
-    {
-        $this->select("
-            historiaclinica.idhistoria,
-            historiaclinica.codigohistoria,
-            historiaclinica.nombres,
-            historiaclinica.apellidos,
-            historiaclinica.telefonoPaciente,
-            historiaclinica.edad,
-            historiaclinica.fechaNac,
-            historiaclinica.distrito,
-            historiaclinica.departamento,
-            historiaclinica.direccion,
-            historiaclinica.fechaCreacion,
-            historiaclinica.provincia,
-            historiaclinica.horaCreacion,
-            historiaclinica.parentezco,
-            historiaclinica.telefono,
-            historiaclinica.dni,
-            historiaclinica.dnifamiliar,
-            historiaclinica.idPersonal,
-            historiaclinica.motivo,
-            historiaclinica.origen,
-            concat_ws(' ', personal.nombre,personal.apellidos) as nombreMedico,
-            tipoespecialidad.nombre as nombreEspecialidad
-        ");
-        $this->join('personal', 'historiaclinica.idPersonal = personal.idPersonal');
-        $this->join('tipoespecialidad', 'personal.idTipoEspecialidad = tipoespecialidad.idTipoEspecialidad');
-        $this->where('historiaclinica.idhistoria', $idhistoria);
-        $query = $this->first();
-        return $query;
-    }
 
     public function getResultadosID($idhistoria)
     {

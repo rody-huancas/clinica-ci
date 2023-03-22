@@ -1,0 +1,47 @@
+CRITICAL - 2023-03-21 22:07:24 --> Undefined array key "nombre"
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\caja\caja.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 70)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('caja/caja', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(184): view('caja/caja')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(53): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->index()
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-21 22:10:33 --> Too few arguments to function App\Controllers\Caja::mostrarPacienteIDgeneral(), 0 passed in C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->mostrarPacienteIDgeneral()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-03-21 22:14:23 --> Undefined variable $query
+#0 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\laragon\\www\\...', 133)
+#1 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(125): App\Models\HistoriaClinicaModel->getBusqueda('a')
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->keyBusqueda('a')
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#4 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2023-03-21 22:16:09 --> Too few arguments to function App\Controllers\Caja::mostrarPacienteIDgeneral(), 0 passed in C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->mostrarPacienteIDgeneral()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-03-21 22:18:04 --> Too few arguments to function App\Controllers\Caja::mostrarPacienteIDgeneral(), 0 passed in C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->mostrarPacienteIDgeneral()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-03-21 22:21:35 --> Too few arguments to function App\Controllers\Caja::mostrarPacienteIDgeneral(), 0 passed in C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->mostrarPacienteIDgeneral()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

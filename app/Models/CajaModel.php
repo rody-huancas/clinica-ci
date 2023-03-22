@@ -127,6 +127,7 @@ class CajaModel extends Model
     {
         $this->select("
         caja.idCaja,
+        caja.nombre,
         caja.gestion,
         caja.referido,
         caja.comentario,

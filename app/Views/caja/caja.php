@@ -18,11 +18,11 @@
                     <div class="form-group d-flex align-items-center justify-content-center">
                         <label for="" class="col-md-1 control-label">Desde:</label>
                         <div class="col-md-3">
-                            <input type="date" class="form-control" name="fechainicio" value="<?php echo !empty($fechainicio) ? $fechainicio : ''; ?>">
+                            <input type="date" class="form-control" name="fechainicio" value="<?php echo !empty($fechainicio) ? $fechainicio : ''; ?>" max="<?= date('Y-m-d') ?>">
                         </div>
                         <label for="" class="col-md-1 control-label">Hasta:</label>
                         <div class="col-md-3">
-                            <input type="date" class="form-control" name="fechafin" value="<?php echo !empty($fechafin) ? $fechafin : ''; ?>">
+                            <input type="date" class="form-control" name="fechafin" value="<?php echo !empty($fechafin) ? $fechafin : ''; ?>" max="<?= date('Y-m-d') ?>">
                         </div>
                         <div class="col-md-4">
                             <input type="submit" name="buscar" value="Buscar" class="btn btn-primary">
@@ -46,6 +46,7 @@
                                     <th class="text-center wd-3p">N°</th>
                                     <th class="text-center wd-40p">Nombre Completo</th>
                                     <th class="text-center wd-20p">Descripción</th>
+                                    <th class="text-center wd-40p">Nombre Medico</th>
                                     <th class="text-center wd-20p">Gestión</th>
                                     <th class="text-center wd-20p">Referido</th>
                                     <th class="text-center wd-20p">Fecha</th>
@@ -71,6 +72,9 @@
                                         </td>
                                         <td class="text-center">
                                             <?php echo $row["comentario"]; ?>
+                                        </td>
+                                        <td class="text-center">
+                                            <?php echo $row["nombreMedico"]; ?>
                                         </td>
                                         <td class="text-center">
                                             <?php echo $row["gestion"]; ?>

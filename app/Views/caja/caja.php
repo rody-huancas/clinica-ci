@@ -18,11 +18,11 @@
                     <div class="form-group d-flex align-items-center justify-content-center">
                         <label for="" class="col-md-1 control-label">Desde:</label>
                         <div class="col-md-3">
-                            <input type="date" class="form-control" name="fechainicio" value="<?php echo !empty($fechainicio) ? $fechainicio : ''; ?>">
+                            <input type="date" class="form-control" name="fechainicio" value="<?php echo !empty($fechainicio) ? $fechainicio : ''; ?>" max="<?= date('Y-m-d') ?>">
                         </div>
                         <label for="" class="col-md-1 control-label">Hasta:</label>
                         <div class="col-md-3">
-                            <input type="date" class="form-control" name="fechafin" value="<?php echo !empty($fechafin) ? $fechafin : ''; ?>">
+                            <input type="date" class="form-control" name="fechafin" value="<?php echo !empty($fechafin) ? $fechafin : ''; ?>" max="<?= date('Y-m-d') ?>">
                         </div>
                         <div class="col-md-4">
                             <input type="submit" name="buscar" value="Buscar" class="btn btn-primary">

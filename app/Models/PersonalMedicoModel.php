@@ -48,6 +48,7 @@ class PersonalMedicoModel extends Model
         $this->join("tipoespecialidad", "tipoespecialidad.idTipoEspecialidad = personal.idTipoEspecialidad");
         $this->join("tipodocumento", "tipodocumento.idTipoDocumento = personal.idTipoDocumento");
         $this->join("tipotrabajador", "tipotrabajador.idTipoTrabajador = personal.idTipoTrabajador");
+        $this->where("personal.idPersonal >", 1 );
 
         $query = $this->findAll();
         return $query;
@@ -69,9 +70,9 @@ class PersonalMedicoModel extends Model
 
         $this->join("tipoespecialidad", "tipoespecialidad.idTipoEspecialidad = personal.idTipoEspecialidad");
 
-        $this->like("personal.nombre", $value);
-        $this->orLike("personal.apellidos", $value);
-        $this->orLike("tipoespecialidad.nombre", $value);
+   
+        $this->where("personal.idPersonal >", 1);
+
         $query = $this->findAll();
         return $query;
 

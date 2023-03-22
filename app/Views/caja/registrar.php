@@ -12,17 +12,17 @@
 
                         <!-- datos paciente -->
                         <h4 class="col-12 tx-gray-800 border-top-secondary mt-3 mb-3">Datos del Paciente</h4>
-                        <div class="col-lg-12 d-flex justify-content-center">
-                            <div class="col-lg-4">
-                                <a class="btn btn-app btn-info text-white mb-3 w-25" data-toggle="modal" data-target="#modalBusqueda" data-backdrop="static" data-keyboard="false">
+
+                        <div class="col-lg-12 d-flex justify-content-center align-items-center mb-5">
+                            <div class="mr-5">
+                                <a class="btn btn-app btn-info text-white" data-toggle="modal" data-target="#modalBusqueda" data-backdrop="static" data-keyboard="false">
                                     <i class="fas fa-search"></i>
                                     Buscar Paciente
                                 </a>
                             </div>
 
-                            <div class="col-lg-4">
-
-                                <select name="idselect" id="idselect" class="form-control custom-select bg-primary text-white">
+                            <div class="">
+                                <select name="idselect" id="idselect" class="form-control custom-select text-white" style="background-color: #158fa2;">
                                     <option label="Seleccione si es una persona general"></option>
                                     <?php foreach ($historiaclinica as $his) : ?>
                                         <?php if ($his["idhistoria"] == 1) { ?>
@@ -34,7 +34,6 @@
                                     <?php endforeach; ?>
                                 </select>
                             </div>
-
                         </div>
 
 

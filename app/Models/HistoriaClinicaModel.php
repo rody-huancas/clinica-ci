@@ -123,6 +123,7 @@ class HistoriaClinicaModel extends Model
                          historiaclinica.dni");
 
         $this->join("personal", "personal.idPersonal = historiaclinica.idPersonal");
+        $this->like("historiaclinica.nombres", $value);
         $this->where("historiaclinica.idhistoria >", 1);
         $query = $this->findAll();
         return $query;

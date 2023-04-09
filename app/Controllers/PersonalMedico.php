@@ -74,15 +74,7 @@ class PersonalMedico extends BaseController
                 "rules" => "required|max_length[15]|is_unique[personal.celular,personal.idPersonal,{id_}]",
                 "errors" => [
                     "required" => "No se aceptan valores vacios.",
-                    "min_length" => "Cant. m�nima de caracteres: [5]",
-                    "max_length" => "Cant. maxima de caracteres: [15]",
-                    "is_unique" => "Ya existe un registro",
-                ]
-            ],
-            "nroDocumento" => [
-                "rules" => "required|max_length[15]|is_unique[personal.numeroDocumento,personal.idPersonal,{id_}]",
-                "errors" => [
-                    "required" => "No se aceptan valores vacios.",
+                    "min_length" => "Cant. mínima de caracteres: [5]",
                     "max_length" => "Cant. maxima de caracteres: [15]",
                     "is_unique" => "Ya existe un registro",
                 ]
@@ -113,16 +105,16 @@ class PersonalMedico extends BaseController
                 "rules" => "required|max_length[20]",
                 "errors" => [
                     "required" => "No se aceptan valores vacios.",
-                    "min_length" => "Cant. m�nima de caracteres: [5]",
-                    "max_length" => "Cant. m�xima de caracteres: [20]",
+                    "min_length" => "Cant. mínima de caracteres: [5]",
+                    "max_length" => "Cant. máxima de caracteres: [20]",
                 ]
             ],
             "celular" => [
                 "rules" => "required|max_length[20]|is_unique[personal.celular,personal.idPersonal,{id_}]",
                 "errors" => [
                     "required" => "No se aceptan valores vacios.",
-                    "min_length" => "Cant. m�nima de caracteres: [5]",
-                    "max_length" => "Cant. m�xima de caracteres: [20]",
+                    "min_length" => "Cant. mínima de caracteres: [5]",
+                    "max_length" => "Cant. máxima de caracteres: [20]",
                     "is_unique" => "Ya existe un registro",
                 ]
             ],
@@ -138,12 +130,6 @@ class PersonalMedico extends BaseController
                     "is_not_unique" => "Valores no permitidos",
                 ]
             ],
-            "listDocumento" => [
-                "rules" => "is_not_unique[tipodocumento.idTipoDocumento]",
-                "errors" => [
-                    "is_not_unique" => "Valores no permitidos",
-                ]
-            ]
         ];
         return $this->rules_per;
     }
@@ -177,6 +163,9 @@ class PersonalMedico extends BaseController
             $listTipoPersonal =  $this->request->getPost("listTipoPersonal");
             $listDocumento =  $this->request->getPost("listDocumento");
 
+            // var_dump($listDocumento);
+            // die();
+
             $data = [
                 "nombre" => $nombre,
                 "apellidos" => $apellidos,
@@ -188,7 +177,7 @@ class PersonalMedico extends BaseController
                 "fechaNac" => $edad,
                 "idTipoEspecialidad" => $listEspecialidad,
                 "idTipoTrabajador"  => $listTipoPersonal,
-                "idTipoDocumento" => $listDocumento
+                "idTipoDocumento" => $listDocumento === "" ? $listDocumento = 1 :  $listDocumento
             ];
             $this->personal->save($data);
             $this->session->setFlashdata("mensaje", "1");

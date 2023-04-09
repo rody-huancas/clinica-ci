@@ -65,6 +65,9 @@
                             <div class="form-group">
                                 <label class="form-control-label">Fecha de Nacimiento: <span class="tx-danger">*</span></label>
                                 <input class="form-control" type="date" name="fecha" id="fecha" value="<?= set_value('fecha') ?>" max="<?= date('Y-m-d') ?>">
+                                <p id="errNom" style="color:red">
+                                    <?php echo (isset($validation)) ? $validation->getError('fecha') : ""; ?>
+                                </p>
                             </div>
                         </div><!-- col-4 -->
 

@@ -175,13 +175,13 @@ class Caja extends BaseController
                 'hora_creacion' => date('H:i:s')
             ];
             
-
+            var_dump($data);
             // Guardar registro en la base de datos
-            $this->caja->save($data);
-            $this->session->setFlashdata("mensaje", "1");
-            $this->session->setFlashdata("texto", "Datos registrados correctamente");
+            // $this->caja->save($data);
+            // $this->session->setFlashdata("mensaje", "1");
+            // $this->session->setFlashdata("texto", "Datos registrados correctamente");
 
-            return redirect()->to(base_url() . "/caja");
+            // return redirect()->to(base_url() . "/caja");
         } else {
             $data["validation"] = $this->validator;
             $data["titulo"] = "Registrar Nueva Venta";

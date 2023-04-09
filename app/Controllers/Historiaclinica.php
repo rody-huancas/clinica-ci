@@ -41,19 +41,19 @@ class Historiaclinica extends BaseController
     {
         $this->rules_historia = [
             "nombre" => [
-                "rules" => "required|max_length[20]",
+                "rules" => "required|min_length[3]|max_length[100]",
                 "errors" => [
                     "required" => "No se aceptan valores vacios.",
-                    "min_length" => "Cant. mínima de caracteres: [5]",
-                    "max_length" => "Cant. máxima de caracteres: [20]",
+                    "min_length" => "Cant. mínima de caracteres: [3]",
+                    "max_length" => "Cant. máxima de caracteres: [100]",
                 ]
             ],
             "apellidos" => [
-                "rules" => "required|max_length[30]",
+                "rules" => "required|min_length[3]|max_length[100]",
                 "errors" => [
                     "required" => "No se aceptan valores vacios.",
-                    "min_length" => "Cant. mínima de caracteres: [5]",
-                    "max_length" => "Cant. maxima de caracteres: [30]",
+                    "min_length" => "Cant. mínima de caracteres: [3]",
+                    "max_length" => "Cant. maxima de caracteres: [100]",
                 ]
             ],
             "dni" => [
@@ -65,54 +65,11 @@ class Historiaclinica extends BaseController
 
                 ]
             ],
-            "telefonoPaciente" => [
-                "rules" => "required|max_length[15]|is_unique[historiaclinica.telefonoPaciente,historiaclinica.idhistoria,{id_}]",
-                "errors" => [
-                    "required" => "No se aceptan valores vacios.",
-                    "min_length" => "Cant. mínima de caracteres: [5]",
-                    "max_length" => "Cant. maxima de caracteres: [15]",
-                    "is_unique" => "Ya existe un registro",
-                ]
-            ],
-            "direccion" => [
-                "rules" => "required|max_length[30]",
-                "errors" => [
-                    "required" => "No se aceptan valores vacios.",
-                    "max_length" => "Cant. maxima de caracteres: [30]",
-                ]
-            ],
             "fecha" => [
                 "rules" => "required",
                 "errors" => [
                     "required" => "Debe seleccionar un valor.",
                 ]
-            ],
-            "distrito" => [
-                "rules" => "required|max_length[15]",
-                "errors" => [
-                    "required" => "Debe seleccionar un valor.",
-                    "max_length" => "Cant. maxima de caracteres: [15]",
-
-                ]
-
-            ],
-            "departamento" => [
-                "rules" => "required|max_length[15]",
-                "errors" => [
-                    "required" => "Debe seleccionar un valor.",
-                    "max_length" => "Cant. maxima de caracteres: [15]",
-
-                ]
-
-            ],
-            "provincia" => [
-                "rules" => "required|max_length[15]",
-                "errors" => [
-                    "required" => "Debe seleccionar un valor.",
-                    "max_length" => "Cant. maxima de caracteres: [15]",
-
-                ]
-
             ],
             "motivo" => [
                 "rules" => "required|max_length[30]",

@@ -75,10 +75,10 @@ class Historiaclinica extends BaseController
                 ]
             ],
             "direccion" => [
-                "rules" => "required|max_length[30]",
+                "rules" => "required|max_length[100]",
                 "errors" => [
                     "required" => "No se aceptan valores vacios.",
-                    "max_length" => "Cant. maxima de caracteres: [30]",
+                    "max_length" => "Cant. maxima de caracteres: [100]",
                 ]
             ],
             "fecha" => [

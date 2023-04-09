@@ -305,3 +305,17 @@ Main connection [MySQLi]: Access denied for user '****'@'localhost' (using passw
 =======
 >>>>>>> fb001e74eb5c11b7e1a73f5cec689be6df6b6b55
 >>>>>>> 6cc0e1fb3e9a60f9f431e8593cd55a43cd7cc765
+ERROR - 2023-03-21 22:22:40 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: NO)
+CRITICAL - 2023-03-21 22:22:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `caja`.`...', Array, false)
+#2 C:\laragon\www\ProyectoClinica_ci\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Models\CajaModel.php(79): CodeIgniter\BaseModel->findAll()
+#5 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Caja.php(42): App\Models\CajaModel->getCaja()
+#6 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->index()
+#7 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}

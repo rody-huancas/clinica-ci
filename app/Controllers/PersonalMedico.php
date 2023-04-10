@@ -62,14 +62,6 @@ class PersonalMedico extends BaseController
                     "max_length" => "Cant. maxima de caracteres: [30]",
                 ]
             ],
-            "direccion" => [
-                "rules" => "required|max_length[20]",
-                "errors" => [
-                    "required" => "No se aceptan valores vacios.",
-                    "min_length" => "Cant. m�nima de caracteres: [5]",
-                    "max_length" => "Cant. m�xima de caracteres: [20]",
-                ]
-            ],
             "celular" => [
                 "rules" => "required|max_length[15]|is_unique[personal.celular,personal.idPersonal,{id_}]",
                 "errors" => [
@@ -94,12 +86,6 @@ class PersonalMedico extends BaseController
 
                 ]
 
-            ],
-            "edad" => [
-                "rules" => "required",
-                "errors" => [
-                    "required" => "No se aceptan valores vacios.",
-                ]
             ],
             "apellidos" => [
                 "rules" => "required|max_length[20]",

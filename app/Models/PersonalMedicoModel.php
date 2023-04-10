@@ -72,7 +72,8 @@ class PersonalMedicoModel extends Model
 
 
         // $this->where("personal.idPersonal >", 1);
-        $this->like("personal.nombre", $value);
+        $this->like("personal.apellidos", $value);
+
         // $this->orLike("persona.apellidos", $value);
         // $this->orLike("persona.numeroDocumento", $value);
         $query = $this->findAll();

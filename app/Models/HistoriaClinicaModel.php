@@ -125,6 +125,8 @@ class HistoriaClinicaModel extends Model
         $this->join("personal", "personal.idPersonal = historiaclinica.idPersonal");
         $this->like("historiaclinica.nombres", $value);
         $this->where("historiaclinica.idhistoria >", 1);
+        $this->orLike("historiaclinica.apellidos", $value);
+
         $query = $this->findAll();
         return $query;
 

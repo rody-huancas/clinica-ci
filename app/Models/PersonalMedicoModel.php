@@ -73,17 +73,12 @@ class PersonalMedicoModel extends Model
 
         // $this->where("personal.idPersonal >", 1);
         $this->like("personal.apellidos", $value);
+        $this->orLike("personal.nombre", $value);
 
-        // $this->orLike("persona.apellidos", $value);
-        // $this->orLike("persona.numeroDocumento", $value);
         $query = $this->findAll();
         return $query;
 
-        /**
-         * SELECT * FROM cliente
-  INNER JOIN persona ON persona.id_persona = cliente.id_persona
-  WHERE persona.nombre LIKE '%a%'  or persona.apellidos LIKE '%a%' or persona.numeroDocumento LIKE '%2%'
-         */
+     
     }
 
     public function getResultadosID($idPersonal)

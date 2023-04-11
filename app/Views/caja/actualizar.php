@@ -69,19 +69,19 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Ingreso: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="number" id="ingreso" name="ingreso" placeholder="Ingreso" value="<?= $caja["ingreso"] ?>">
+                                <input class="form-control"  id="ingreso" name="ingreso" placeholder="Ingreso" value="<?= $caja["ingreso"] ?>">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Egreso 1: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="number" id="egreso_one" name="egreso_one" placeholder="Egreso 1" value="<?= $caja["egreso_one"] ?>">
+                                <input class="form-control"  id="egreso_one" name="egreso_one" placeholder="Egreso 1" value="<?= $caja["egreso_one"] ?>">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label">Egreso 2: <span class="tx-danger">*</span></label>
-                                <input class="form-control" type="number" id="egreso_two" name="egreso_two" placeholder="Egreso 2" value="<?= $caja["egreso_two"] ?>">
+                                <input class="form-control"  id="egreso_two" name="egreso_two" placeholder="Egreso 2" value="<?= $caja["egreso_two"] ?>">
                             </div>
                         </div>
 

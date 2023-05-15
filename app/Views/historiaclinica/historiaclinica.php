@@ -11,10 +11,10 @@
 
 <div class="br-pagebody pd-x-30">
     <div class="br-pagebody">
-        <div class="br-section-wrapper">
-            <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10 mb-5 d-flex justify-content-between">
+        <div class="br-section-wrapper text-center">
+            <h6 id="h6_historiaclinica" class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10 mb-5 d-flex justify-content-between">
                 Historias Clínicas Registradas
-                <a href="<?php echo base_url() ?>/historiaclinica/registrar"><button class="btn btn-primary" type="button" style="cursor: pointer;"><i class="icon ion-plus"></i> Nueva Historia Clínica</button></a>
+                <a href="<?php echo base_url() ?>/historiaclinica/registrar"><button id="btn_historiaclinica" class="btn btn-primary" type="button" style="cursor: pointer;"><i class="icon ion-plus"></i> Nueva Historia Clínica</button></a>
             </h6>
             <div class="form-layout form-layout-1">
                 <div class="row mg-b-25">

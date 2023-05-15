@@ -117,25 +117,21 @@ class HistoriaClinicaModel extends Model
     public function getBusqueda($value)
     {
         $this->select("historiaclinica.idhistoria,
-                         concat_ws(' ', historiaclinica.nombres, historiaclinica.apellidos) as paciente,
-                         personal.nombre,
-                         historiaclinica.motivo,
-                         historiaclinica.dni");
+                       concat_ws(' ', historiaclinica.nombres, historiaclinica.apellidos) as paciente,
+                       personal.nombre,
+                       historiaclinica.motivo,
+                       historiaclinica.dni");
 
         $this->join("personal", "personal.idPersonal = historiaclinica.idPersonal");
-        $this->like("historiaclinica.nombres", $value);
         $this->where("historiaclinica.idhistoria >", 1);
+        $this->groupStart();
+        $this->like("historiaclinica.nombres", $value);
         $this->orLike("historiaclinica.apellidos", $value);
         $this->orLike("historiaclinica.dni", $value);
-
+        $this->groupEnd();
         $query = $this->findAll();
         return $query;
-
-       
     }
-
-
-
 
     public function getResultadosID($idhistoria)
     {
@@ -168,5 +164,14 @@ class HistoriaClinicaModel extends Model
         $this->where('historiaclinica.idhistoria', $idhistoria);
         $query = $this->first();
         return $query;
+    }
+
+
+    public function cantHistoriaClinica()
+    {
+        $this->select("count(idhistoria) as cant");
+        $query = $this->first();
+        return $query['cant']-1;
+        
     }
 }

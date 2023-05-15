@@ -59,7 +59,7 @@ class PersonalMedicoModel extends Model
         $this->select("count(idPersonal) as cant");
         //$this->where('usuario.estad != ',0);
         $query = $this->first();
-        return $query['cant'];
+        return $query['cant']-1;
     }
 
     public function getBusqueda($value)
@@ -80,6 +80,7 @@ class PersonalMedicoModel extends Model
 
      
     }
+
 
     public function getResultadosID($idPersonal)
     {

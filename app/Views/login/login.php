@@ -25,6 +25,7 @@
 
     <div class="d-lg-flex half">
         <div class="bg order-1 order-md-2" style="background-image: url('<?php echo base_url(); ?>/public/login/images/fondo.jpg');"></div>
+
         <div class="contents order-2 order-md-1">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
@@ -47,14 +48,20 @@
                                 </p>
                             </div>
                             <?php if (isset($_SESSION["msj_login"])) : ?>
-                                 <small class="form-text text-center text-danger"><b><?php echo $_SESSION["msj_login"]; ?></b></small>
+                                <small class="form-text text-center text-danger"><b><?php echo $_SESSION["msj_login"]; ?></b></small>
                             <?php endif; ?>
                             <input type="submit" value="Ingresar" class="btn btn-block text-white" style="background-color: #4A6CC2;">
 
                         </form>
+                        <div class="d-flex justify-content-around align-items-center mt-3 pt-2 pb-2">
+                            <strong>Usuario:admin</strong>
+                            <strong>Password:123456</strong>
+                        </div>
                     </div>
+
                 </div>
             </div>
+
         </div>
 
 

@@ -173,4 +173,11 @@ class CajaModel extends Model
         $query = $this->findAll();
         return $query;
     }
+
+    public function cantCaja()
+    {
+        $this->select("count(idCaja) as cant");
+        $query = $this->first();
+        return $query['cant'];
+    }
 }

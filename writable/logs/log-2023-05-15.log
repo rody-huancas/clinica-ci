@@ -1,0 +1,247 @@
+CRITICAL - 2023-05-15 04:47:18 --> Too few arguments to function App\Controllers\Caja::mostrarPacienteIDgeneral(), 0 passed in C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Caja->mostrarPacienteIDgeneral()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Caja))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-05-15 13:47:53 --> CodeIgniter\Database\BaseBuilder::limit(): Argument #2 ($offset) must be of type ?int, float given, called in C:\laragon\www\ProyectoClinica_ci\system\Model.php on line 728
+#0 C:\laragon\www\ProyectoClinica_ci\system\Model.php(728): CodeIgniter\Database\BaseBuilder->limit(1, 1.844674407371E+19)
+#1 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(172): CodeIgniter\Model->__call('limit', Array)
+#2 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(38): App\Models\HistoriaClinicaModel->cantHistoriaClinica()
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#4 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#5 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2023-05-15 13:48:52 --> Call to a member function limit() on array
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(38): App\Models\HistoriaClinicaModel->cantHistoriaClinica()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-05-15 13:50:20 --> Call to a member function limit() on string
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-05-15 13:50:21 --> Call to a member function limit() on string
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-05-15 13:54:11 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 174)
+#1 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(38): App\Models\HistoriaClinicaModel->cantHistoriaClinica()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#4 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2023-05-15 13:54:20 --> CodeIgniter\Database\BaseBuilder::limit(): Argument #1 ($value) must be of type ?int, string given, called in C:\laragon\www\ProyectoClinica_ci\system\Model.php on line 728
+#0 C:\laragon\www\ProyectoClinica_ci\system\Model.php(728): CodeIgniter\Database\BaseBuilder->limit('', 1)
+#1 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(172): CodeIgniter\Model->__call('limit', Array)
+#2 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(38): App\Models\HistoriaClinicaModel->cantHistoriaClinica()
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#4 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#5 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2023-05-15 13:54:27 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 174)
+#1 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(38): App\Models\HistoriaClinicaModel->cantHistoriaClinica()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#4 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2023-05-15 13:55:59 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-05-15 13:55:59 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+#0 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-05-15 13:56:40 --> Call to undefined method App\Models\HistoriaClinicaModel::count_all_results
+#0 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(38): CodeIgniter\Model->__call('count_all_resul...', Array)
+#1 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#2 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#3 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2023-05-15 13:57:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `historiaclinica`
+ LIMIT 1' at line 2
+CRITICAL - 2023-05-15 13:57:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `historiaclinica`
+ LIMIT 1' at line 2
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT count(id...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT count(id...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT count(id...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT count(id...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(173): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(38): App\Models\HistoriaClinicaModel->cantHistoriaClinica()
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-15 13:57:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `historiaclinica`
+ LIMIT 1' at line 2
+CRITICAL - 2023-05-15 13:57:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `historiaclinica`
+ LIMIT 1' at line 2
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT count(id...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT count(id...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT count(id...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT count(id...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(173): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(38): App\Models\HistoriaClinicaModel->cantHistoriaClinica()
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-15 13:57:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `historiaclinica`
+ LIMIT 1' at line 2
+CRITICAL - 2023-05-15 13:57:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `historiaclinica`
+ LIMIT 1' at line 2
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT count(id...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT count(id...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT count(id...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT count(id...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(173): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(38): App\Models\HistoriaClinicaModel->cantHistoriaClinica()
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-15 13:57:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `historiaclinica`
+ LIMIT 1' at line 2
+CRITICAL - 2023-05-15 13:57:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `historiaclinica`
+ LIMIT 1' at line 2
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT count(id...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT count(id...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT count(id...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT count(id...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(173): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(38): App\Models\HistoriaClinicaModel->cantHistoriaClinica()
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-05-15 13:58:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `historiaclinica`
+ LIMIT 1' at line 2
+CRITICAL - 2023-05-15 13:58:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `historiaclinica`
+ LIMIT 1' at line 2
+#0 C:\laragon\www\ProyectoClinica_ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT count(id...', 0)
+#1 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT count(id...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT count(id...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT count(id...', Array, false)
+#4 C:\laragon\www\ProyectoClinica_ci\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ProyectoClinica_ci\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\ProyectoClinica_ci\app\Models\HistoriaClinicaModel.php(173): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\ProyectoClinica_ci\app\Controllers\Inicio.php(38): App\Models\HistoriaClinicaModel->cantHistoriaClinica()
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\Inicio->index()
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-15 14:26:58 --> syntax error, unexpected token "?"
+#0 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('personalmedico/...', Array, true)
+#2 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(184): view('personalmedico/...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Controllers\PersonalMedico.php(43): view('index', Array)
+#7 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\PersonalMedico->index()
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalMedico))
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-05-15 14:40:13 --> syntax error, unexpected token "="
+#0 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('personalmedico/...', Array, true)
+#2 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(184): view('personalmedico/...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Controllers\PersonalMedico.php(44): view('index', Array)
+#7 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\PersonalMedico->index()
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalMedico))
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-05-15 14:44:17 --> Undefined property: CodeIgniter\View\View::$session
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\personalmedico\personalmedico.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\laragon\\www\\...', 46)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('personalmedico/...', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(184): view('personalmedico/...')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\PersonalMedico.php(44): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\PersonalMedico->index()
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalMedico))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-15 14:44:42 --> Undefined property: CodeIgniter\View\View::$session
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\personalmedico\personalmedico.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\laragon\\www\\...', 46)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('personalmedico/...', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(184): view('personalmedico/...')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\PersonalMedico.php(44): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\PersonalMedico->index()
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalMedico))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-15 14:45:30 --> Undefined variable $nombre_usuario
+#0 C:\laragon\www\ProyectoClinica_ci\app\Views\personalmedico\personalmedico.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\laragon\\www\\...', 47)
+#1 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('personalmedico/...', Array, true)
+#4 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(184): view('personalmedico/...')
+#5 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#8 C:\laragon\www\ProyectoClinica_ci\app\Controllers\PersonalMedico.php(44): view('index', Array)
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\PersonalMedico->index()
+#10 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalMedico))
+#11 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-15 14:54:17 --> syntax error, unexpected identifier "hola", expecting "," or ";"
+#0 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('personalmedico/...', Array, true)
+#2 C:\laragon\www\ProyectoClinica_ci\app\Views\index.php(184): view('personalmedico/...')
+#3 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\ProyectoClinica_ci\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\laragon\www\ProyectoClinica_ci\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#6 C:\laragon\www\ProyectoClinica_ci\app\Controllers\PersonalMedico.php(44): view('index', Array)
+#7 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(832): App\Controllers\PersonalMedico->index()
+#8 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersonalMedico))
+#9 C:\laragon\www\ProyectoClinica_ci\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ProyectoClinica_ci\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}

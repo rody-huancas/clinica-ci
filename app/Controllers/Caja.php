@@ -162,7 +162,7 @@ class Caja extends BaseController
             // Generar código único
 
             $data = [
-                'idhistoria' => $txt_IDHistoria=='' ? $idselect:$txt_IDHistoria,
+                'idhistoria' => $txt_IDHistoria == '' ? $idselect : $txt_IDHistoria,
                 'nombre' => $nombrePaciente,
                 'referido' => $referido,
                 'comentario' => $comentario,
@@ -175,11 +175,12 @@ class Caja extends BaseController
                 'hora_creacion' => date('H:i:s')
             ];
             
-            ///Guardar registro en la base de datos
+
+            // var_dump($data);
+            // Guardar registro en la base de datos
             $this->caja->save($data);
             $this->session->setFlashdata("mensaje", "1");
             $this->session->setFlashdata("texto", "Datos registrados correctamente");
-
             return redirect()->to(base_url() . "/caja");
         } else {
             $data["validation"] = $this->validator;

@@ -25,6 +25,7 @@ class PersonalMedico extends BaseController
             die();
         }
         $this->validacion = \Config\Services::validation();
+        $this->session = \Config\Services::session();
         $this->personal = new PersonalMedicoModel();
         $this->tipopersonal = new TipoPersonalModel();
         $this->especialidad = new EspecialidadModel();
@@ -33,12 +34,12 @@ class PersonalMedico extends BaseController
 
     public function index()
     {
-        $data['contenido'] = 'personalmedico/personalmedico';
         $data["titulo"] = "Personal Medico";
         $data["personal"] = $this->personal->getPersonal();
         $data["tipoespecialidad"] = $this->especialidad->findAll();
         $data["tipotrabajador"] = $this->tipopersonal->findAll();
         $data["tipodocumento"] = $this->tipodocumento->findAll();
+        $data['contenido'] = 'personalmedico/personalmedico';
 
         return view('index', $data);
     }

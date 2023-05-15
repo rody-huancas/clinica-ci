@@ -41,8 +41,13 @@
                                 foreach ($usuario as $row) : $cont++; ?>
                                     <tr>
                                         <td class="d-flex">
-                                            <a href="<?php echo base_url() ?>/usuarios/VerRegistro/<?php echo $row["idUsuario"]; ?>" class="btn btn-primary btn-sm btnEditRol"><i class="icon ion-edit"></i></a>
-                                            <a href="<?php echo base_url() ?>/usuarios/eliminarRegistro/<?php echo $row["idUsuario"]; ?>" class="btn btn-danger btn-sm btnDelRol ml-1"><i class="icon ion-close"></i></a>
+                                            <?php 
+                                        if(session('rol')==1){
+                                            echo '<a href="'.  base_url().'/usuarios/VerRegistro/'.$row["idUsuario"].'" class="btn btn-primary btn-sm btnDelRol"><i class="icon ion-edit"></i></a>';
+
+                                            echo '<a href="'.  base_url().'/usuarios/eliminarRegistro/'.$row["idUsuario"].'" class="btn btn-danger btn-sm btnDelRol ml-1"><i class="icon ion-close"></i></a>';
+                                            }
+                                        ?>
                                         </td>
                                         <td class="text-center">
                                             <?php echo $cont ?></php>

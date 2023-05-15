@@ -13,18 +13,18 @@
     <div class="br-pagebody">
         <div class="br-section-wrapper">
 
-            <div class="d-flex justify-content-center mb-5">
+            <div class="div_caja ">
                 <form action="<?php echo current_url(); ?>" method="POST" class="form-horizontal">
-                    <div class="form-group d-flex align-items-center justify-content-center">
+                    <div class="div__box">
                         <label for="" class="col-md-1 control-label">Desde:</label>
-                        <div class="col-md-3">
+                        <div class="colum-md-3">
                             <input type="date" class="form-control" name="fechainicio" value="<?php echo !empty($fechainicio) ? $fechainicio : ''; ?>" max="<?= date('Y-m-d') ?>">
                         </div>
                         <label for="" class="col-md-1 control-label">Hasta:</label>
-                        <div class="col-md-3">
+                        <div class="colum-md-3">
                             <input type="date" class="form-control" name="fechafin" value="<?php echo !empty($fechafin) ? $fechafin : ''; ?>" max="<?= date('Y-m-d') ?>">
                         </div>
-                        <div class="col-md-4">
+                        <div class="colum-md-4">
                             <input type="submit" name="buscar" value="Buscar" class="btn btn-primary">
                             <a href="<?php echo base_url(); ?>/caja" class="btn btn-danger">Restablecer</a>
                         </div>

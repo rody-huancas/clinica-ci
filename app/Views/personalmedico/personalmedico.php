@@ -10,10 +10,10 @@
 
 <div class="br-pagebody mg-t-5 pd-x-30">
   <div class="br-pagebody">
-    <div class="br-section-wrapper">
-      <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10 mb-5 d-flex justify-content-between">
+    <div class="br-section-wrapper text-center">
+      <h6 id="h6_personalmedico" class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10 mb-5 d-flex justify-content-between">
         Tipo Personal Registrados
-        <a href="<?php echo base_url() ?>/PersonalMedico/registrar"><button class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium" type="button"> Nuevo Tipo Personal</button></a>
+        <a href="<?php echo base_url() ?>/PersonalMedico/registrar"><button id="btn_personalmedico" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium" type="button"> Nuevo Tipo Personal</button></a>
       </h6>
 
       <div class="table-responsive overflow-x-scroll">
@@ -41,7 +41,11 @@
               <tr>
                 <td class="text-center">
                   <a href="<?php echo base_url() ?>/personalmedico/VerRegistro/<?php echo $row["idPersonal"]; ?>"><button class="btn btn-primary btn-sm ml-1" title="Editar"><i class="icon ion-edit"></i></button></a>
-                  <button class="btn btn-danger btn-sm btnDelRol ml-1" id="btnEliminar" onclick="seleccionar(<?php echo $row['idPersonal'] ?>)" title="Eliminar"><i class="icon ion-close"></i></button>
+                 <?php 
+                    if(session('rol')==1){
+                       echo '<button class="btn btn-danger btn-sm btnDelRol ml-1" id="btnEliminar" onclick="seleccionar('.$row['idPersonal'].')" title="Eliminar"><i class="icon ion-close"></i></button> ';
+                    }
+                  ?>
                 </td>
                 <td class="text-center"><?php echo $cont; ?></td>
                 <td class="text-center"> <?php echo $row["nombre"]; ?> </td>

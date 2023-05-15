@@ -104,7 +104,7 @@
                         <h4 class="col-12 tx-gray-800 border-top-secondary mt-3 mb-3" style="border-top: 2px solid #E9ECEF; padding-top: 15px;">Datos del Médico</h4>
 
                         <div class="col-lg-12">
-                            <a class="btn btn-app btn-info text-white mb-3 w-25" data-toggle="modal" data-target="#modalBusqueda" data-backdrop="static" data-keyboard="false">
+                            <a id="buscar_historia" class="btn btn-app btn-info text-white mb-3" data-toggle="modal" data-target="#modalBusqueda" data-backdrop="static" data-keyboard="false">
                                 <i class="fas fa-search"></i>
                                 Buscar
                             </a>
@@ -152,7 +152,7 @@
                         </div>
                     </div><!-- row -->
 
-                    <div class="form-layout-footer">
+                    <div id="btn_registrarHistoria" class="form-layout-footer">
                         <input type="submit" value="Guardar" id="btnEnviar" class="btn btn-primary" name="btnEnviar">
                         <a href="<?php echo base_url() ?>/historiaclinica" class="btn btn-secondary">Cancelar</a>
                     </div><!-- form-layout-footer -->
@@ -165,7 +165,7 @@
 
 
 <div class="modal form-modal w-100" id="modalBusqueda" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-lg w-100">
+    <div id="modal_busqueda" class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="col-sm-3">

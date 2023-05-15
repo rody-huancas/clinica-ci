@@ -13,15 +13,15 @@
                         <!-- datos paciente -->
                         <h4 class="col-12 tx-gray-800 border-top-secondary mt-3 mb-3">Datos del Paciente</h4>
 
-                        <div class="col-lg-12 d-flex justify-content-center align-items-center mb-5">
-                            <div class="mr-5">
-                                <a class="btn btn-app btn-info text-white" data-toggle="modal" data-target="#modalBusqueda" data-backdrop="static" data-keyboard="false">
+                        <div class="buscar__caja">
+                            <div class="btn_ancho">
+                                <a class="btn btn-app btn-info text-white w-100" data-toggle="modal" data-target="#modalBusqueda" data-backdrop="static" data-keyboard="false">
                                     <i class="fas fa-search"></i>
                                     Buscar Paciente
                                 </a>
                             </div>
 
-                            <div class="">
+                            <div>
                                 <select name="idselect" id="idselect" class="form-control custom-select text-white" style="background-color: #158fa2;">
                                     <option label="Seleccione si es una persona general"></option>
                                     <?php foreach ($historiaclinica as $his) : ?>
@@ -137,8 +137,8 @@
 </div>
 
 
-<div class="modal form-modal w-100" id="modalBusqueda" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-lg w-100">
+<div class="modal form-modal" id="modalBusqueda" style="display: none;" aria-hidden="true">
+    <div id="modal_busquedaHistoria" class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="col-sm-3">

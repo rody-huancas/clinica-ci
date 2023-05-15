@@ -155,7 +155,7 @@
 
                     </div><!-- row -->
 
-                    <div class="form-layout-footer">
+                    <div id="btn_registrarPersonal" class="form-layout-footer">
                         <input type="submit" value="Registrar" class="btn btn-primary" name="btnEnviar">
                         <a href="<?php echo base_url() ?>/PersonalMedico" class="btn btn-secondary">Cancelar</a>
                     </div><!-- form-layout-footer -->

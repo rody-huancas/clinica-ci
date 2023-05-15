@@ -11,11 +11,11 @@
 
 
 <div class="br-pagebody mg-t-5 pd-x-30">
-    <div class="br-pagebody">
+    <div class="br-pagebody text-center">
         <div class="br-section-wrapper">
-            <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10 mb-5 d-flex justify-content-between">
+            <h6 id="h6_especialidad" class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10 mb-5 d-flex justify-content-between">
                 Especialidades Registradas
-                <button class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium" type="button" data-toggle="modal" data-target="#modaldemo3"> Nueva Especialidad</button>
+                <button id="btn_especialidad" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium" type="button" data-toggle="modal" data-target="#modaldemo3"> Nueva Especialidad</button>
             </h6>
 
             <div class="table-responsive">
